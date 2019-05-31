@@ -1,0 +1,98 @@
+<!--pages/myinfo/myinfo.wxml-->
+<form bindsubmit="formSubmit">
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">出发地</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="out" placeholder="请输入出发地" value='new york'/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+               
+            </view>
+              <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">目的地</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="out" placeholder="请输入目的地" value='new york'/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+               
+            </view>
+  <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="about" placeholder="请输入日期" value='范围'/>
+                </view>
+            </view>
+             <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">人数</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="phone" placeholder="请输入人数" value='2'/>
+                </view>
+            </view>
+ 
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">手机号码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="phone" placeholder="请输入手机号码" value='15220229041'/>
+                </view>
+            </view>
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="username" placeholder="请输入姓名" value='李福森' />
+                </view>
+            </view>
+            
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="sex" value='{{sex}}'/>
+                </view>
+                <view class="weui-cell__ft">
+                       <switch checked bindchange='switchChange'/>
+                </view>
+            </view>
+
+              <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">类型</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="cartype" value='{{cartype}}'/>
+                </view>
+                <view class="weui-cell__ft">
+                       <switch checked bindchange='switchChange1'/>
+                </view>
+            </view>
+ 
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">年龄</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="age"  placeholder="请输入年龄" value='19' />
+                </view>
+            </view>
+        </view>
+        <view class="btn-area">
+         <button type='primary' formType="submit">提交</button>
+         </view>
+        </form>

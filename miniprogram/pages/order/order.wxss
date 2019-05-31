@@ -1,0 +1,34 @@
+#view1{
+  background-color: gainsboro;
+  color: darkcyan;
+  text-align: center;
+  margin-top: 9rpx;
+  border-radius: 10rpx;
+}
+#view2{
+  margin-top: 9rpx;
+  background-color:black;
+  color: white;
+  text-align: center;
+  border-radius: 10rpx;
+}
+#ppt{
+  width: 100%;
+  padding-left: 40px;
+}
+#button1{
+   height: 150rpx;
+   width: 350rpx;
+   border-radius: 20rpx;
+   background-color: blue;
+   text-align: center;
+   color: white;
+}
+#button2{
+   height: 150rpx;
+   width: 350rpx;
+  text-align: center;
+   border-radius: 20rpx;
+   background-color: red;
+   color: white;
+}

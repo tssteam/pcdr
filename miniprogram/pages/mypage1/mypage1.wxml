@@ -1,0 +1,114 @@
+<view class='tophead'>
+<button>05-16 今天</button>
+<button>05-16 周一</button>
+<button>05-17 周二</button>
+<button>05-18 周三</button>
+<button>05-19 周四</button>
+ <image src="/images/date.png" bindtap="show" class="dateImg"></image>
+</view>
+<view wx:for="{{order_list1}}">
+  <van-card
+  num="{{item.zt}}"
+  tag="空座{{item.site}}"
+  price="{{item.price}}"
+  desc="司机：{{item.username}}"
+  title="{{item.incar}}——>{{item.out}}"
+  thumb="{{avatarUrl}}"
+>
+<view slot="tags">
+ <van-tag plain type="success">{{item.beizhu}}：出发日期:20{{item.time}}</van-tag>
+   
+  </view>
+  <view slot="tags">  <van-tag plain type="primary">{{t}}</van-tag></view>
+  <view slot="footer">
+    <van-button size="mini" bindtap='getwxname'>预约</van-button>
+  </view>
+</van-card>
+</view>
+  
+<view>
+<view class="zhezao" hidden="{{flag}}">
+  <view class="t_w">
+ 
+    <!--右上角图标开始-->
+    <view class="t_image"  bindtap="conceal">
+    
+    </view>
+    <!--右上角图标结束-->
+ 
+    <!--弹出框开始-->
+    <view class="tanchu_view">
+      <view>
+      
+ 
+  <view class="bg_view">
+        </view>
+      
+    <view class="section section_gap">
+  <text class="section__title"> 出发时间</text>
+  <view class="body-view">
+    <view class='sliderHCon'>
+  <view class='showMoney'>
+    <text class='MoneyValue'>{{leftValue/100}}点--</text>
+    <text class='MoneyValue'>{{rightValue/100}}点</text>
+  </view>
+  <view class='twoSlider'>
+    <slider min='{{leftMin}}' max='{{leftMax}}' value='{{leftValue}}' activeColor='#cecacb' backgroundColor='#f26a36' block-size='20' step='100' style='width:{{leftWidth}}%;margin-right:0rpx;' bindchange="leftChange" />
+    <slider min='{{rightMin}}' max='{{rightMax}}' value='{{rightValue}}' activeColor='#f26a36' backgroundColor='#cecacb' block-size='20' step='100' style='width:{{rightWidth}}%;margin-left:0rpx;' bindchange="rightChange" />
+  </view>
+</view>
+  </view>
+</view>     
+       
+
+
+
+<view class="bg_view">
+        </view>
+      
+         <view class="section section_gap">
+  <text class="section__title"> 价格</text>
+  <view class="body-view">
+    <view class='sliderHCon'>
+  <view class='showMoney'>
+    <text class='MoneyValue'>{{leftValue1/10}}$--</text>
+    <text class='MoneyValue'>{{rightValue1/10}}$</text>
+  </view>
+  <view class='twoSlider'>
+    <slider min='{{leftMin1}}' max='{{leftMax1}}' value='{{leftValue1}}' activeColor='#cecacb' backgroundColor='#f26a36' block-size='20' step='100' style='width:{{leftWidth1}}%;margin-right:0rpx;' bindchange="leftChange1" />
+    <slider min='{{rightMin1}}' max='{{rightMax1}}' value='{{rightValue1}}' activeColor='#f26a36' backgroundColor='#cecacb' block-size='20' step='100' style='width:{{rightWidth1}}%;margin-left:0rpx;' bindchange="rightChange1" />
+  </view>
+</view>
+  </view>
+</view>        
+
+
+
+
+
+
+
+        <view>
+        <checkbox>商务车</checkbox>
+  <checkbox>残疾人士</checkbox>
+  </view>
+  <view>
+  <checkbox>行李</checkbox>
+  <checkbox>宠物</checkbox>
+        </view>
+
+         <!--确定开始-->
+        <view class="txtsure"  >
+          <view class="txtsurebg" bindtap="conceal">
+              <text class="txtsurename">添加筛选条件</text>
+          </view>        
+        </view>
+         <!--确定结束-->
+       </view>
+    </view>
+    <!--弹出框结束-->
+  </view>
+</view>
+</view>
+
+  

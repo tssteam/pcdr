@@ -1,0 +1,26 @@
+<view>
+ <view id='ppt'>
+ <image src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
+<view id='view1'>
+<button id='button1' bindtap='pfindcar'>
+我是乘客
+</button>
+<text>发布人找车</text>
+<view>
+<text>寻找顺路的的司机，拼车去远方。</text>
+</view>
+
+</view>
+<view id='view2'>
+<button id='button2' bindtap='carfindp'>
+我是车主
+</button>
+<text>发布车找人</text>
+<view>
+<text>带上好友，知己，和同路的乘客，轻松省油。</text>
+</view>
+
+<text></text>
+</view>
+
+</view>
