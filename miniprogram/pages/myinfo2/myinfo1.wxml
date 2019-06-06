@@ -1,0 +1,27 @@
+
+<view class='container'>
+  <loading hidden="{{!loading}}">加载中</loading>
+ 
+  <block class="container1" wx:for="{{order_list2}}" wx:key="id">
+    <navigator url='../item1/item?id={{item._id}}'>
+      <view hover-class='hover-class' id="{{item._id}}" style='display:flex; height:120px;border-bottom: 1px solid #DBDBDB'>
+        <!--左边图片-->
+        <view style='width:128rpx; height:128rpx; margin:20rpx;'>
+          <image class='index-logo' style='width:128rpx; height:128rpx' src="{{avatarUrl}}"></image>
+        </view>
+        <!-- 右边内容 上下结构 -->
+        <view style='display:flex; flex-direction:column; margin:20rpx;'>
+          <label class='item_title'>名字：{{item.username}}</label>
+          <label class='item_content'>价格：{{item.price}}$</label>
+          <label class='item_content1' >订单号：{{item._id}}</label>
+           <label class='item_content2' >状态：{{item.zt}}</label>
+          <!-- 右边底部内容 左右结构 -->
+          <view style='display:flex; flex-direction:row; height:40rpx;'>
+            <label class='item_from'>起:{{item.incar}}</label>
+            <label class='item_time'>终:{{item.out}}</label>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

@@ -9,11 +9,14 @@
     "pages/chooseLib/chooseLib",
     "pages/myinfo/myinfo",
     "pages/myinfo1/myinfo1",
+    "pages/myinfo2/myinfo1",
     "pages/index/index",
     "pages/order/order",
     "pages/pay/pay",
     "pages/mypage/mypage",
     "pages/mypage1/mypage1",
+    "pages/mypage2/mypage",
+    "pages/mypage3/mypage",
     "pages/demo/demo",
     "pages/carfindp/index",
     "pages/pfindcar/index",
@@ -23,7 +26,13 @@
     "pages/demo4/demo3",
     "pages/demo5/demo3",
     "pages/item/item",
-    "pages/cal/index"
+    "pages/item1/item",
+    "pages/item2/item",
+    "pages/ite3/item",
+    "pages/ite4/item",
+    "pages/ite5/item",
+    "pages/cal/index",
+    "pages/userConsole1/userConsole"
     
   ],
   "window": {

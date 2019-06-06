@@ -70,11 +70,16 @@ page {
 
 .guide .p {
   margin-top: 20rpx;
-  font-size: 28rpx;
+  font-size: 32rpx;
   line-height: 36rpx;
-  color: #666;
+  color:red;
 }
-
+.guide .p1 {
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color:azure;
+}
 .guide .code {
   margin-top: 20rpx;
   font-size: 28rpx;
@@ -141,4 +146,3 @@ page {
 .guide .nav .next {
   margin-right: unset;
 }
-

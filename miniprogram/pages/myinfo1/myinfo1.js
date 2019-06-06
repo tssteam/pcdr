@@ -15,7 +15,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -38,6 +38,7 @@ Page({
       success: res => {
         console.log('[云函数] [login] user openid: ', res.result.openid)
         var _this = this;
+       
         const db = wx.cloud.database()
         db.collection('user').where({
           _openid: res.result.openid
@@ -68,12 +69,6 @@ Page({
   },
   
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
 
   /**
    * 生命周期函数--监听页面隐藏

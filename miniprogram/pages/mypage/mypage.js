@@ -1,6 +1,5 @@
-const db = wx.cloud.database({});
-const user = db.collection('user');
 var dateTimePicker = require('../../utils/dateTimePicker.js');
+
 Page({
   data: {
     show: false,
@@ -23,14 +22,23 @@ Page({
     rightValue1: 3500, //右边滑块默认值
     leftWidth1: '50', //左边滑块可滑动长度：百分比
     rightWidth1: '50', //右边滑块可滑动长度：百分比
-
     order_list:[] ,
+    start:"",
+    end:"",
     avatarUrl: "cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg"
   },
 
   onPullDownRefresh() {
     wx.stopPullDownRefresh()
   },
+
+
+
+//模板信息
+
+
+
+
 
   // 遮罩层显示
   show: function () {
@@ -62,7 +70,13 @@ Page({
     })
   },
 
+yes:function(e){
+  var that = this
+   this.setData({
+     yy:"已预约"
+   })
 
+},
 
   // 左边滑块滑动的值
   leftChange1: function (e) {
@@ -82,36 +96,40 @@ Page({
   },
 
 
-  getwxname: function (options){
-    var _this = this;
-    db.collection('user').get({
-      success: res => {
-        console.log(res.data)
-        this.setData({
-          t: 15220229041,
-    
-        })
-
-      }
-    })
+  getwxname: function (e){
+    console.log(e)
   
   },
 
+  onShow: function (options) {
+ 
+    wx.setNavigationBarTitle({ title: '从{{start}}到{{end}}的拼车' })
+    wx.cloud.init({
+      traceUser: true
+    }) 
 
-  onLoad: function(options) {
-    var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
-    var date1 = new Date();
-    wx.setNavigationBarTitle({ title: '从xx到xx的拼车' })
-    var _this = this ;
-    db.collection('user').get({
-      success: res =>{
+
+    wx.cloud.callFunction({
+      name: 'getcout',
+
+      complete: res => {
+        var _this = this;
+
+        const db = wx.cloud.database()
+
         this.setData({
-          order_list:res.data,
-          date: obj.dateTime,
+          order_list: res.result.data.reverse(),
 
         })
-        
+
+
       }
     })
-  },
+
+  
+        }
+    
+      
+   
+  
 })

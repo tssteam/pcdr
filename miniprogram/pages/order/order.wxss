@@ -31,4 +31,6 @@
    border-radius: 20rpx;
    background-color: red;
    color: white;
+}.image1{
+  padding-left: 20rpx;
 }

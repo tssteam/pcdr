@@ -1,6 +1,6 @@
 <view>
  <view id='ppt'>
- <image src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
+ <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
 <view id='view1'>
 <button id='button1' bindtap='pfindcar'>
 我是乘客

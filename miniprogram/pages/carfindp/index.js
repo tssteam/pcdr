@@ -26,7 +26,8 @@ Page({
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    zt: "没完成"
+    zt: "没完成",
+    pc: { pcin: '起点', pcout: '终点' }
   },
   switchChange: function (e) {
     if (e.detail.value) {
@@ -78,6 +79,20 @@ Page({
       dateTimeArray1: obj1.dateTimeArray,
       dateTime1: obj1.dateTime
     });
+     var that = this 
+    wx.getStorage({
+      key: 'mysec1',
+      success: function (res) {
+        that.setData({
+          wxname: res.data.wx2,
+          city: res.data.c2,
+          phone: res.data.ph2,
+          username: res.data.n2,
+        })
+      },
+
+
+    })
   },
   changeDate(e) {
     this.setData({ date: e.detail.value });
@@ -86,9 +101,12 @@ Page({
     this.setData({ time: e.detail.value });
   },
   changeDateTime(e) {
+    console.log(e.detail.value)
+
     this.setData({ dateTime: e.detail.value });
   },
   changeDateTime1(e) {
+    console.log(e.detail.value)
     this.setData({ dateTime1: e.detail.value });
   },
   changeDateTimeColumn(e) {
@@ -103,7 +121,6 @@ Page({
   },
   changeDateTimeColumn1(e) {
     var arr = this.data.dateTime1, dateArr = this.data.dateTimeArray1;
-
     arr[e.detail.column] = e.detail.value;
     dateArr[2] = dateTimePicker.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
 
@@ -250,7 +267,6 @@ Page({
         incar: e.detail.value.incar,
         username: e.detail.value.username,
         phone: e.detail.value.phone,
-        sex: e.detail.value.sex,
       
         cartype: e.detail.value.cartype,
         site: e.detail.value.site,
@@ -258,33 +274,40 @@ Page({
         inname: e.detail.value.inname,
         outname: e.detail.value.outname,
         time: e.detail.value.time,
+        time1: e.detail.value.time1,
         zt: "没完成",
         beizhu: e.detail.value.beizhu,
-        pcar: e.detail.value.pcar,
+        pcar: e.detail.value.pcar
       },
       success: res => {
-        // 在返回结果中会包含新创建的记录的 _id
         this.setData({
           out: e.detail.value.out,
           incar: e.detail.value.incar,
           username: e.detail.value.username,
           phone:e.detail.value.phone,
-          sex: e.detail.value.sex,
-         
+
           site: e.detail.value.site,
           cartype: e.detail.value.cartype,
           price: e.detail.value.price,
           inname: e.detail.value.inname,
           outname: e.detail.value.outname,
           time: e.detail.value.time,
+          time1: e.detail.value.time1,
           zt: "没完成",
+          yd: "预定",
           beizhu: e.detail.value.beizhu,
-          pcar: e.detail.value.pcar,
+          pc: { pcin: e.detail.value.out, pcout: e.detail.value.incar },
+          pcar: e.detail.value.pcar
         })
+
         wx.showToast({
           title: '新增记录成功',
+          
         })
         console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+        wx.navigateTo({
+          url: '../userConsole1/userConsole?pc=' + JSON.stringify(this.data.pc),
+        })
       },
       fail: err => {
         wx.showToast({
@@ -294,9 +317,7 @@ Page({
         console.error('[数据库] [新增记录] 失败：', err)
       }
     })
-    wx.navigateTo({
-      url: '../userConsole/userConsole',
-    })
+   
   },
 
 
@@ -309,7 +330,7 @@ Page({
         wxname: e.detail.value.wxname,
         username: e.detail.value.username,
         phone: e.detail.value.phone,
-        sex: e.detail.value.sex,
+        yd:"预定",
       
         cartype:e.detail.value,
         site: e.detail.value.site,
@@ -326,7 +347,7 @@ Page({
           wxname: e.detail.value.wxname,
           username: e.detail.value.username,
           phone: e.detail.value.phone,
-          sex: e.detail.value.sex,
+          yd: "预定",
           age: e.detail.value.age,
           cartype: e.detail.value,
           site: e.detail.value.site,

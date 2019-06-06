@@ -1,31 +1,43 @@
+ <form bindsubmit="formSubmit">
 <view class="page" >
  <!--页头-->
+  <view class="head1">      
+      <view class='head2'>
+      <button class='buttonl'  type='{{bcolor}}' bindtap='button'>人找车</button>
+       <button  class='buttonl' type='{{bcolor1}}'  bindtap='button1'>车找人</button>
+      </view>  
+</view>
  <view id='ppt'>
- <image src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
+ <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
+
+
  <view class="page__hd">
   <view class="head">
     <input    type="text" name='start'  bindtap='city' value='{{city1}}'/>
     <image src="/images/to.png" class="to"></image>
-    <input bindtap='city1' time value='{{city}}' auto-focus/>
+    <input bindtap='city1' name="end"  value='{{city}}' auto-focus/>
   </view>
  </view>
+
+
 
 <view class='time'>
       <view class='picker'>
        <image src="/images/date.png" class="dateImg"></image>
       <view>
-          <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          <picker mode="multiSelector" name="starttime" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
           日期: {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}}
       </picker>
       </view>
       </view> 
 </view>
 
+
 <view class='time'>
       <view class='picker'>
         <image src="/images/date.png" class="dateImg"></image>
         <view>
-          <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="" range="{{dateTimeArray}}">
+          <picker mode="multiSelector" name="endtime" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="" range="{{dateTimeArray}}">
         直至: {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
     </picker>
         </view>
@@ -33,10 +45,11 @@
 </view>
 
 
+
 <view class='time'>
       <view class='picker'>
       <image src="/images/Tourist.png" class="dateImg"></image>
-         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+         <picker bindchange="bindPickerChange" name="people" value="{{index}}" range="{{array}}">
     <view class="picker">
       人数：{{array[index]}}
     </view>
@@ -44,28 +57,20 @@
       </view> 
 </view>
 
+
+
+
 <view class='time'>
       <view class='picker'>
       <image src="/images/money.jpg" class="dateImg"></image>
-           <input  name="beizhu" value='备注：'/>
-            
+           <input  name="beizhu" value='备注：'/>      
       </view>   
 </view>
 
-<view class='time'>
-<image src="/images/vehicle.png" class="dateImg"></image>
 
-  <checkbox-group class="radio-group" 
-          >
-  <label class="radio">
-    <checkbox value='人找车' bindtap='ppl' />人找车
-    <checkbox value='车找人' bindtap='ppl1' />车找人
-   
-  </label>
-</checkbox-group>
-</view>
 
 <view class="page__bd">
-       <button  class='search' bindtap='open'>搜索</button>
+       <button  class='search'  formType="submit">搜索</button>
 </view>
 </view>
+</form>

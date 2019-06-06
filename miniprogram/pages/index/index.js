@@ -7,7 +7,8 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    name:'点击头像登录'
   },
 open:function(){
 
@@ -15,6 +16,12 @@ open:function(){
       url: '../myinfo1/myinfo1'
     })
 },
+  open1: function () {
+
+    wx.navigateTo({
+      url: '../myinfo2/myinfo1'
+    })
+  },
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({
@@ -29,10 +36,14 @@ open:function(){
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
+            
             success: res => {
+              console.log(res.userInfo),
               this.setData({
                 avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
+                userInfo: res.userInfo,
+                name:res.userInfo.nickName
+
               })
             }
           })

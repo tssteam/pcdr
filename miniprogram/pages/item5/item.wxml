@@ -1,0 +1,49 @@
+
+<view class='container' wx:for="{{list}}" style='display:block;'>
+  <view class='item'>
+    <view class='left'>名字</view>
+    <view class='right'>{{item.username}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>性别</view>
+    <view class='right'>{{item.sex}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>电话</view>
+    <view class='right'>{{item.phone}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>价格</view>
+    <view class='right'>{{item.price}}\t元</view>
+  </view>
+  <view class='item'>
+    <view class='left'>订单号</view>
+    <view class='right'>{{item._id}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>出发地</view>
+    <view class='right'>{{item.out}}</view>
+  </view>
+   <view class='item'>
+    <view class='left'>备注</view>
+    <view class='right'>{{item.outname}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>目的地</view>
+    <view class='right'>{{item.incar}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>备注</view>
+    <view class='right'>{{item.inname}}</view>
+  </view>
+  <view class='item'>
+    <view class='left'>人数</view>
+    <view class='right'>{{item.site}}</view>
+  </view>
+    <view class='item'>
+    <view class='left'>微信名</view>
+    <view class='right'>{{item.wxname}}</view>
+  </view>
+  <view class='on'> <button class='onr' bindtap='onfin'>订单预定</button>
+   <button class='onr1' bindtap='onfin1'>取消订单</button></view>
+</view>

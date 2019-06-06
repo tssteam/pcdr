@@ -5,7 +5,7 @@
     <view class="list-item" bindtap="testCgi">
         <button class='share' id="shareBtn" open-type="share" hover-class="other-button-hover">
         <image src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image>
-        <text>分享</text>
+        分享
         </button>
 
     </view>
@@ -17,9 +17,9 @@
 
   <view class="guide">
     <text class="headline">订单完成页面</text>
-    <text class="p"></text>
+    <text class="p">1:从{{pin}}到{{pout}}</text>
     <text class="p" bindtap='order'>2. 切换到"订单管理" </text>
-    <text class="p" bindtap='mypage'>3. 切换到"查询界面"</text>
+    <text class="p" bindtap='mypage'>3. 全部车主查询界面"</text>
   </view>
 
 </view>

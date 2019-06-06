@@ -1,9 +1,133 @@
 // pages/userConsole/userConsole.js
+
+var coors
+
+var that2
+
 Page({
 
   data: {
-   
+   pc:{pcin:"",pcout:""},
+   pin:'',
+   pout:'',
+   polyline: [],
+
+    markers: [{
+
+      iconPath: "/images/auto1.png",
+
+      latitude: 23.362490,
+
+      longitude: 116.715790,
+
+      width: 25,
+
+      height: 25
+
+    },
+
+    {
+
+      iconPath: "/images/auto1.png",
+
+      latitude: 23.37228,
+
+      longitude: 116.75498,
+
+      width: 25,
+
+      height: 25
+
+    }],
+
   },
+
+
+  onReady: function () {
+
+    that2 = this
+
+    wx.request({
+
+      url: 'https://apis.map.qq.com/ws/direction/v1/driving/?from=23.362490,116.715790&to=23.37228,116.75498&output=json&callback=cb&key=22VBZ-REEK5-WVSI7-QKCOP-QPM6E-W7BPO',
+
+
+      success: function (res) {
+
+
+
+        coors = res.data.result.routes[0].polyline
+
+
+        for (var i = 2; i < coors.length; i++) { coors[i] = coors[i - 2] + coors[i] / 1000000 }
+
+        console.log(coors)
+
+      }
+
+
+    })
+
+
+  },
+
+
+
+
+
+
+
+
+   end: function () {
+
+
+
+    var b = []
+
+    for (var i = 0; i < coors.length; i = i + 2) {
+
+      b[i / 2] = {
+
+        latitude: coors[i], longitude: coors[i + 1]
+      }
+
+       console.log(b[i / 2])
+
+    }
+
+    console.log(b.length)
+
+
+
+     that2.setData({
+
+      polyline: [{
+
+        points: b,
+
+        color: "#99FF00",
+
+        width: 4,
+
+        dottedLine: false
+
+      }],
+
+
+
+     })
+
+  },
+
+
+
+
+
+
+
+
+
+
 
 
   onShareAppMessage: function (ops) {
@@ -16,7 +140,7 @@ Page({
     }
     return {
       title: '标签',
-      path: '/pages/detail/detail?id=' + this.data.id, 
+      path: '/pages/home/index', 
       success: function (res) {
         // 转发成功
         console.log(res);
@@ -31,18 +155,30 @@ Page({
   },
 
   onLoad: function (options) {
-   
+    console.log("接收到的参数是=" + options.pc)
+    this.data.pc = JSON.parse(options.pc);
+    console.log(this.data.pc.pcout)
+    console.log(this.data.pc.pcin)
+    this.setData({ pin: this.data.pc.pcin,
+    
+    pout: this.data.pc.pcout
+    }
+     
+    );
   },
   order:function(){
     wx.navigateTo({
-      url: '../item/item',
+      url: '../myinfo1/myinfo1',
     })
 
   },
+
+
+
   mypage:function(){
 
     wx.navigateTo({
-      url: '../mypage/mypage',
+      url: '../mypage1/mypage1',
     })
   }
 })

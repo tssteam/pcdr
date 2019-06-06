@@ -8,8 +8,59 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  onfin:function(){
+
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        var _this = this;
+        console.log(this.data.id);
+        const db = wx.cloud.database()
+        db.collection('user').doc(this.data.id).update({
+
+          data: {
+           zt:"已完成"
+          } 
+        }
+      
+        )
+        wx.navigateBack({
+          url: '../myinfo1/myinfo1',
+        })
+
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+
+      }
+    }) 
 
 
+  },
+  onRemove: function (){
+    console.log(this.data.id)
+
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        var _this = this;
+        console.log(this.data.id);
+        const db = wx.cloud.database()
+        db.collection('user').doc(this.data.id).remove()
+        wx.navigateBack({
+          url: '../myinfo1/myinfo1',
+        })
+      
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+
+      }
+    }) 
+
+  },
 
   onLoad: function (options) {
     console.log(options.id)

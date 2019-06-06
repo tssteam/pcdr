@@ -17,3 +17,25 @@
 .right{
   padding-right: 30rpx;
 }
+.on{
+  height: 120rpx;
+  width: 100%;
+  color: white;
+  padding-left: 80rpx;
+}
+.onr{
+  height: 120rpx;
+  width: 300rpx;
+  float: left;
+  background-color:blue;
+  color: white;
+  border-radius:20rpx; 
+}
+.onr1{
+  height: 120rpx;
+  width: 300rpx;
+  float: left;
+  background-color:blue;
+  color: white;
+ border-radius:20rpx; 
+}

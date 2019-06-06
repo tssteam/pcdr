@@ -44,5 +44,7 @@
     <view class='left'>微信名</view>
     <view class='right'>{{item.wxname}}</view>
   </view>
-  <button bindtap='onRemove'>删除订单</button>
+  <view class='on'> <button class='onr' bindtap='onRemove'>删除订单</button>
+   <button class='onr1' bindtap='onfin'>订单完成</button></view>
+ 
 </view>

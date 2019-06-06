@@ -26,6 +26,17 @@ Page({
   },
 
   formSubmit: function (e) {
+    var n2 = e.detail.value.name
+    var wx2 = e.detail.value.wxname
+    var c2 = e.detail.value.city
+    var p2 = e.detail.value.prov
+    var ph2 = e.detail.value.phone
+    wx.setStorage({
+      key: "mysec1",
+      data: { n2, wx2, c2, p2, ph2 },
+      success: console.log("ok")
+
+    })
     const db = wx.cloud.database()
     db.collection('oneuser').add({
       data: {

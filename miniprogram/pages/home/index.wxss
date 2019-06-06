@@ -8,6 +8,40 @@
 }
 
 /**index.wxss**/
+
+.head1{
+  height: 100rpx;
+  width: 100%;
+  background-color: white;
+
+}
+.head2{
+  height: 100rpx;
+  width: 400rpx;
+  background-color:green;
+  margin-left: 180rpx;
+  border-radius: 50rpx;
+}
+.buttonl{
+   width: 200rpx;
+   height: 100rpx;
+   background-color: green;
+   float: left;
+   color: white;
+   border-radius: 50rpx;
+
+}
+.buttonr{
+   width: 200rpx;
+   height: 100rpx;
+   float: left;
+   color: white;
+   background-color: green;
+   border-radius: 50rpx;
+   
+
+}
+
 .head{
   display:flex;
   flex-direction:row;
@@ -103,4 +137,7 @@ margin:2rpx 10rpx;
   background-color: green;
   margin-top: 10px;
   color:white
+}
+.image1{
+  padding-left: 20rpx;
 }

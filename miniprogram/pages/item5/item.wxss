@@ -1,0 +1,41 @@
+.on{
+  height: 120rpx;
+  width: 100%;
+  color: white;
+  padding-left: 80rpx;
+}
+.onr{
+  height: 120rpx;
+  width: 300rpx;
+  float: left;
+  background-color:blue;
+  color: white;
+  border-radius:20rpx; 
+}
+.onr1{
+  height: 120rpx;
+  width: 300rpx;
+  float: left;
+  background-color:blue;
+  color: white;
+ border-radius:20rpx; 
+}
+
+.item{
+  width: 100%;
+  margin-top: 10rpx; 
+  font-size: 30rpx;
+  display: flex;
+  height: 80rpx;
+  border-bottom: 1px solid #DBDBDB;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.left{
+  padding-left: 30rpx;
+  color: #A9A9A9;
+}
+.right{
+  padding-right: 30rpx;
+}

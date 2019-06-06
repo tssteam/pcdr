@@ -1,0 +1,25 @@
+<!--pages/userConsole/userConsole.wxml-->
+<view class="container">
+
+  <view class="list">
+    <view class="list-item" bindtap="testCgi">
+        <button class='share' id="shareBtn" open-type="share" hover-class="other-button-hover">
+        <image src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image>
+        分享
+        </button>
+
+    </view>
+    <view class="list-item" bindtap="testCgi">
+  
+    </view>
+  </view>
+
+
+  <view class="guide">
+    <text class="headline">订单完成页面</text>
+    <text class="p">1:从{{pin}}到{{pout}}</text>
+    <text class="p" bindtap='order'>2. 切换到"订单管理" </text>
+    <text class="p" bindtap='mypage'>3. 全部乘客订单查询界面"</text>
+  </view>
+
+</view>

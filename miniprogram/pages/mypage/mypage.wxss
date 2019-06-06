@@ -10,9 +10,11 @@
     height: 50rpx;
 }
 .tophead{
-  color: blue;
-  height: 200rpx;
+  color:white;
+  height: 121rpx;
   width: 100%;
+  background-color: blue;
+  color: white;
 }
 .tophead button{
   height: 120rpx;

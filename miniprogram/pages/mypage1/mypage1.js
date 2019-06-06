@@ -1,5 +1,4 @@
-const db = wx.cloud.database({});
-const carfindp = db.collection('carfindp');
+
 Page({
   data: {
     show: false,
@@ -23,7 +22,8 @@ Page({
     rightWidth1: '50', //右边滑块可滑动长度：百分比
 
 
-
+ 
+  
 
     order_list1: [],
     avatarUrl: "cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg"
@@ -101,18 +101,29 @@ Page({
 
 
 
-  onLoad: function(options) {
-      wx.setNavigationBarTitle({ title: '从xx到xx的拼车' })
-    
-    var _this = this ;
-    db.collection('carfindp').get({
-      success: res =>{
+  onShow: function (e) {
+   
+    wx.cloud.init({
+      traceUser: true
+    })
+
+
+    wx.cloud.callFunction({
+      name: 'getcar',
+
+      complete: res => {
+        var _this = this;
+
+        const db = wx.cloud.database()
+
         this.setData({
-          order_list1:res.data
+          order_list1: res.result.data.reverse(),
 
         })
-        
+
+
       }
     })
-  },
+  }
+    ,
 })

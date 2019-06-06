@@ -13,6 +13,8 @@ Page({
     over:'',
     yes:1,
     bs:1,
+    bcolor:'',
+    bcolor1: '',
     date: '2018-10-01',
     time: '12:00',
     dateTimeArray: null,
@@ -26,7 +28,8 @@ Page({
     startDate:'today',
     multiArray: [['今天', '明天', '后天', ], [0, 1, 2, 3, 4, 5, 6], [0, 10, 20]],
     cartype: ['车找人'],
-
+    bbcc: {outcat: '起点', incar: '终点',beizhu:'' },
+    bbcc1: {outcat: '起点', incar: '终点', beizhu: '' },
     start_time: null,
     items: [
       { name: 'p2c', value: '人找车', checked: 'true' },
@@ -82,9 +85,11 @@ Page({
     this.setData({ time: e.detail.value });
   },
   changeDateTime(e) {
+    console.log(e.detail.value)
     this.setData({ dateTime: e.detail.value });
   },
   changeDateTime1(e) {
+    console.log(e.detail.value)
     this.setData({ dateTime1: e.detail.value }); 
   },
   changeDateTimeColumn(e) {
@@ -193,27 +198,89 @@ getmap:function(e){
   switchChange: function (e) {
     if (e.detail.value) {
       this.setData({ cartype: '车找人' });
-      this.setData({yes:1})
+    
     } else {
       this.setData({ cartype: '人找车' });
-      this.setData({ yes: 2 })
+    
     }
+  },
+
+
+  button:function(e){
+    this.setData({ yes: 2,
+      bcolor:"warn",
+      bcolor1:"",
+     })
 
   },
 
-  open: function (e) {
+  button1: function (e) {
+    this.setData({ yes: 1,
+      bcolor: "",
+      bcolor1: "warn",
+     })
+  },
+
+
+
+
+
+
+
+
+
+  formSubmit: function (e) {
+    var s1 = e.detail.value.start
+    var e1 = e.detail.value.end
+    var st1 = e.detail.value.starttime
+    var ed1 = e.detail.value.endtime
+    var pep1 = e.detail.value.people
+    var bz = e.detail.value.beizhu
+    console.log(s1,e1,st1,ed1,pep1,bz)
+    wx.setStorage({
+      key: "mysec",
+      data: { s1,e1,st1,ed1,pep1,bz },
+      success:console.log("ok")
+      
+      })
+
     var text = this.data.yes;
-    if(text==1){
-      wx.navigateTo({
-        url: '../mypage1/mypage1'
-      })
-    } if (text== 2) {
-      wx.navigateTo({
-        url: '../mypage/mypage'
-      })
+    if (text == 1) {
+
+          wx.navigateTo({
+            url: '../mypage3/mypage',
+          })
+    
+    
+
+     
+    } if (text == 2) {
+          wx.navigateTo({
+            url: '../mypage2/mypage',
+          })
+
+
     }
-   
+  
+
+
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   bindTimeChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)

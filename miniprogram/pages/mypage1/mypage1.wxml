@@ -1,12 +1,9 @@
 <view class='tophead'>
-<button>05-16 今天</button>
-<button>05-16 周一</button>
-<button>05-17 周二</button>
-<button>05-18 周三</button>
-<button>05-19 周四</button>
+<text>拼车达人与你同行</text>
  <image src="/images/date.png" bindtap="show" class="dateImg"></image>
 </view>
 <view wx:for="{{order_list1}}">
+ <navigator url='../item3/item?id={{item._id}}'>
   <van-card
   num="{{item.zt}}"
   tag="空座{{item.site}}"
@@ -16,14 +13,12 @@
   thumb="{{avatarUrl}}"
 >
 <view slot="tags">
- <van-tag plain type="success">{{item.beizhu}}：出发日期:20{{item.time}}</van-tag>
-   
+ <van-tag plain type="success">出发日期:20{{item.time}}至20{{item.time1}}</van-tag>
   </view>
-  <view slot="tags">  <van-tag plain type="primary">{{t}}</van-tag></view>
-  <view slot="footer">
-    <van-button size="mini" bindtap='getwxname'>预约</van-button>
-  </view>
+  <view slot="tags">  <van-tag plain type="primary">{{item.beizhu}}</van-tag></view>
+  
 </van-card>
+ </navigator>
 </view>
   
 <view>
