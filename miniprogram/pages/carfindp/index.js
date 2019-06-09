@@ -71,15 +71,13 @@ Page({
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     // 精确到分的处理，将数组的秒去掉
-    var lastArray = obj1.dateTimeArray.pop();
-    var lastTime = obj1.dateTime.pop();
     this.setData({
       dateTime: obj.dateTime,
-      dateTimeArray: obj.dateTimeArray,
+	  dateTimeArray: obj.dateTimeArray,
       dateTimeArray1: obj1.dateTimeArray,
       dateTime1: obj1.dateTime
-    });
-     var that = this 
+	});
+	var that = this 
     wx.getStorage({
       key: 'mysec1',
       success: function (res) {
