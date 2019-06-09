@@ -5,10 +5,6 @@
     <view class='right'>{{item.username}}</view>
   </view>
   <view class='item'>
-    <view class='left'>性别</view>
-    <view class='right'>{{item.sex}}</view>
-  </view>
-  <view class='item'>
     <view class='left'>电话</view>
     <view class='right'>{{item.phone}}</view>
   </view>
@@ -25,7 +21,7 @@
     <view class='right'>{{item.out}}</view>
   </view>
    <view class='item'>
-    <view class='left'>备注</view>
+    <view class='left'>出发地备注</view>
     <view class='right'>{{item.outname}}</view>
   </view>
   <view class='item'>
@@ -33,7 +29,7 @@
     <view class='right'>{{item.incar}}</view>
   </view>
   <view class='item'>
-    <view class='left'>备注</view>
+    <view class='left'>目的地备注</view>
     <view class='right'>{{item.inname}}</view>
   </view>
   <view class='item'>

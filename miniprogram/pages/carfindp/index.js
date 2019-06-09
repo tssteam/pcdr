@@ -74,8 +74,8 @@ Page({
     this.setData({
       dateTime: obj.dateTime,
 	  dateTimeArray: obj.dateTimeArray,
-      dateTimeArray1: obj1.dateTimeArray,
-      dateTime1: obj1.dateTime
+      dateTimeArray1: obj.dateTimeArray,
+      dateTime1: obj.dateTime
 	});
 	var that = this 
     wx.getStorage({

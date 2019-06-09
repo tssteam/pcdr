@@ -5,54 +5,54 @@ var city = [
     item: [
 
       {
-        "name": "纽约",
+        "name": "纽约(New York)",
         "key": "热门",
-        "test":"testValue"
+        "test": "testValue"
       },
       {
-        "name": "阿比林",
+        "name": "阿比林(Abilene)",
         "key": "热门"
       },
       {
-        "name": "巴尔的摩",
+        "name": "巴尔的摩(Baltimore)",
         "key": "热门"
       },
       {
-        "name": "萨利纳斯",
+        "name": "萨利纳斯(Salinas)",
         "key": "热门"
       },
       {
-        "name": "剑桥",
-        "key": "热门"
-      },
-
-      {
-        "name": "波士顿",
-        "key": "热门"
-      },
-      {
-        "name": "旧金山",
-        "key": "热门"
-      },
-      {
-        "name": "迈阿密",
-        "key": "热门"
-      },
-      {
-        "name": "奥兰多",
-        "key": "热门"
-      },
-      {
-        "name": "雅典",
-        "key": "热门"
-      },
-      {
-        "name": "阿雷西沃",
+        "name": "剑桥(Cambridge)",
         "key": "热门"
       },
 
       {
-        "name": "亚历山德里亚",
+        "name": "波士顿(Boston)",
+        "key": "热门"
+      },
+      {
+        "name": "旧金山(San Francisco)",
+        "key": "热门"
+      },
+      {
+        "name": "迈阿密(Miami)",
+        "key": "热门"
+      },
+      {
+        "name": "奥兰多(Orlando)",
+        "key": "热门"
+      },
+      {
+        "name": "雅典(Athens)",
+        "key": "热门"
+      },
+      {
+        "name": "阿雷西沃(Arecibo)",
+        "key": "热门"
+      },
+
+      {
+        "name": "亚历山德里亚(Alexandria)",
         "key": "热门"
       }
 
