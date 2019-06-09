@@ -9,7 +9,7 @@
   tag="空座{{item.site}}"
   price="{{item.price}}"
   desc="司机：{{item.username}}"
-  title="{{item.incar}}——>{{item.out}}"
+  title="{{item.out}}——>{{item.incar}}"
   thumb="{{avatarUrl}}"
 >
 <view slot="tags">

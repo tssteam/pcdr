@@ -10,7 +10,7 @@
   tag="{{item.cartype}}：{{item.site}}"
   price="{{item.price}}"
   desc="乘客：{{item.username}}"
-  title="{{item.incar}}——>{{item.out}}"
+  title="{{item.out}}——>{{item.incar}}"
   thumb="{{avatarUrl}}"
 >
 <view slot="tags">

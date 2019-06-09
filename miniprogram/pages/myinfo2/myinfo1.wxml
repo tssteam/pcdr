@@ -17,8 +17,8 @@
            <label class='item_content2' >状态：{{item.zt}}</label>
           <!-- 右边底部内容 左右结构 -->
           <view style='display:flex; flex-direction:row; height:40rpx;'>
-            <label class='item_from'>起:{{item.incar}}</label>
-            <label class='item_time'>终:{{item.out}}</label>
+            <label class='item_from'>起:{{item.out}}</label>
+            <label class='item_time'>终:{{item.incar}}</label>
           </view>
         </view>
       </view>

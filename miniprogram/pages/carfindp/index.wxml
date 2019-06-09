@@ -91,7 +91,7 @@
 			{{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
 		</picker>
 		--
-		<picker mode="multiSelector" name="time1" value="{{dateTime}}" bindchange="changeDateTime1" class="weui-input" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
+		<picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="weui-input" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
 			{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
 		</picker>
 	</view>
