@@ -1,5 +1,4 @@
 // pages/userConsole/userConsole.js
-
 var coors
 
 var that2
@@ -10,6 +9,8 @@ Page({
    pc:{pcin:"",pcout:""},
    pin:'',
    pout:'',
+   address1:"",
+   address2:"",
    polyline: [],
     longitude: 113.324520,
     latitude: 23.099994,
@@ -20,13 +21,20 @@ Page({
       longitude: 113.324520,
       width: 50,
       height: 50
-    }]
-    
+    }],
+    markers1: [{
+      id: 0,
+      iconPath: "../../images/Taxi.png",
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }],
 
   },
 
   getLocation: function () {
-     var that = this ;
+    var that = this
     wx.getLocation({
       type: 'wgs84',
       success(res) {
@@ -165,8 +173,9 @@ Page({
     console.log(this.data.pc.pcout)
     console.log(this.data.pc.pcin)
     this.setData({ pin: this.data.pc.pcin,
-    
-    pout: this.data.pc.pcout
+    pout: this.data.pc.pcout,
+      address1: this.data.pc.pcin,
+      address2: this.data.pc.pcout,
     }
      
     );

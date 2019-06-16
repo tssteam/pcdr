@@ -160,6 +160,7 @@ Page({
       yes: 1
     })
   },
+  
 getmap:function(e){
   var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js')
   var qqmapsdk

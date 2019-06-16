@@ -33,8 +33,8 @@ Page({
           markers: [{
             id: 0,
             iconPath: "../../images/Taxi.png",
-            latitude: res.latitude,
-            longitude: res.longitude,
+            latitude: res.latitude+3,
+            longitude: res.longitude+3,
             width: 50,
             height: 50
           }],
