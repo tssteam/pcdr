@@ -1,7 +1,8 @@
   
   <view class='tophead'>
+  <image src="/images/date.png" bindtap="show" class="dateImg"></image>
 <text>拼车达人与你同行</text>
- <image src="/images/date.png" bindtap="show" class="dateImg"></image>
+
 </view>
 <view wx:for="{{order_list}}" >
  <navigator url='../item2/item?id={{item._id}}'>

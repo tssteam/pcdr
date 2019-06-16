@@ -257,6 +257,7 @@ Page({
   },
 
   formSubmit: function (e) {
+    console.log("修改")
     const db = wx.cloud.database()
     db.collection('carfindp').add({
       data: {
