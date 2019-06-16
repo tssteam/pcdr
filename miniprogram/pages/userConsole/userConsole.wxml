@@ -1,6 +1,6 @@
 <!--pages/userConsole/userConsole.wxml-->
 <view class="container">
-<view ><map class='map1'></map></view> 
+<view ><map class='map1'  longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location bindtap='getLocation' ></map></view> 
   <view class="list">
     <view class="list-item" bindtap="testCgi">
         <button class='share' id="shareBtn" open-type="share" hover-class="other-button-hover">

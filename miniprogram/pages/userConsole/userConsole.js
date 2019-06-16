@@ -11,47 +11,39 @@ Page({
    pin:'',
    pout:'',
    polyline: [],
-
+    longitude: 113.324520,
+    latitude: 23.099994,
     markers: [{
-
-      iconPath: "/images/auto1.png",
-
-      latitude: 23.362490,
-
-      longitude: 116.715790,
-
-      width: 25,
-
-      height: 25
-
-    },
-
-    {
-
-      iconPath: "/images/auto1.png",
-
-      latitude: 23.37228,
-
-      longitude: 116.75498,
-
-      width: 25,
-
-      height: 25
-
-    }],
+      id: 0,
+      iconPath: "../../images/Taxi.png",
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }]
+    
 
   },
 
   getLocation: function () {
+     var that = this ;
     wx.getLocation({
       type: 'wgs84',
       success(res) {
         const latitude = res.latitude
         const longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-        })
+       that.setData({
+         latitude: res.latitude,
+         longitude: res.longitude,
+         markers:[{
+           id: 0,
+           iconPath: "../../images/Taxi.png",
+           latitude: res.latitude,
+           longitude: res.longitude,
+           width: 50,
+           height: 50
+         }],
+       })
       }
     })
   },

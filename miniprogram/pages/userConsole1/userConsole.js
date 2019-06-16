@@ -4,25 +4,44 @@ Page({
   data: {
    pc:{pcin:"",pcout:""},
    pin:'',
-   pout:''
+   pout:'',
+    longitude: 113.324520,
+    latitude: 23.099994,
+    markers: [{
+      id: 0,
+      iconPath: "../../images/Taxi.png",
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }]
+
   },
 
 
 
   getLocation: function () {
+    var that = this;
     wx.getLocation({
       type: 'wgs84',
       success(res) {
         const latitude = res.latitude
         const longitude = res.longitude
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
+        that.setData({
+          latitude: res.latitude,
+          longitude: res.longitude,
+          markers: [{
+            id: 0,
+            iconPath: "../../images/Taxi.png",
+            latitude: res.latitude,
+            longitude: res.longitude,
+            width: 50,
+            height: 50
+          }],
         })
       }
     })
   },
-
 
 
   onShareAppMessage: function (ops) {
