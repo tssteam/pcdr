@@ -5,6 +5,8 @@ Page({
    pc:{pcin:"",pcout:""},
    pin:'',
    pout:'',
+    address1: "",
+    address2: "",
     longitude: 113.324520,
     latitude: 23.099994,
     markers: [{
@@ -14,7 +16,8 @@ Page({
       longitude: 113.324520,
       width: 50,
       height: 50
-    }]
+    }  
+    ]
 
   },
 
@@ -33,8 +36,8 @@ Page({
           markers: [{
             id: 0,
             iconPath: "../../images/Taxi.png",
-            latitude: res.latitude+3,
-            longitude: res.longitude+3,
+            latitude: res.latitude,
+            longitude: res.longitude,
             width: 50,
             height: 50
           }],
