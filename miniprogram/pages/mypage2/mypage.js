@@ -23,7 +23,8 @@ Page({
     rightValue1: 1500, //右边滑块默认值
     leftWidth1: '50', //左边滑块可滑动长度：百分比
     rightWidth1: '50', //右边滑块可滑动长度：百分比
-
+    outp:"起点",
+    inp:"终点",
     order_list: [],
     avatarUrl: "cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg"
   },
@@ -86,26 +87,27 @@ Page({
 
 
   onShow: function (options) {
-    wx.setNavigationBarTitle({ title: '从xx到xx的拼车' })
+    wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })
     var that = this;
     wx.getStorage({
       key: 'mysec',
       success: function (res) {
+        that.setData({
+         outp:res.data.s1,
+         inp:res.data.e1,
+        })
         db.collection('user').where({
           out: res.data.s1,
           incar: res.data.e1,
           site:res.data.pep1,
           time:res.data.st1,
           time1:res.data.ed1,
-
         }
-
         ).get({
           success: res => {
             console.log(res.data)
             that.setData({
               order_list: res.data,
-
             })
 
           }

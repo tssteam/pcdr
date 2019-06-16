@@ -102,7 +102,7 @@ Page({
 
 
   onShow: function (e) {
-   
+    wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })
     wx.cloud.init({
       traceUser: true
     })

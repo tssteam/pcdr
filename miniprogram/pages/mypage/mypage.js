@@ -103,7 +103,7 @@ yes:function(e){
 
   onShow: function (options) {
  
-    wx.setNavigationBarTitle({ title: '从{{start}}到{{end}}的拼车' })
+    wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })
     wx.cloud.init({
       traceUser: true
     }) 

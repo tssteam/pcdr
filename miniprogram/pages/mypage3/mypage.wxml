@@ -1,7 +1,7 @@
   
-  <view class='tophead'>
-<text>拼车达人与你同行</text>
- <image src="/images/date.png" bindtap="show" class="dateImg"></image>
+  <view class='tophead' >
+  <image src="/images/date.png" bindtap="show" class="dateImg"></image>
+<text>从{{outp}}到{{inp}}的拼车</text>
  
 </view>
 <view wx:for="{{order_list1}}" >

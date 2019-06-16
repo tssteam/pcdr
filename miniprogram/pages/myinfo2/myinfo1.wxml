@@ -3,7 +3,7 @@
  <navigator url='../item1/item?id={{item._id}}'>
   <van-card
   num="{{item.zt}}"
-  tag="{{item.cartype}}：{{item.site}}"
+  tag="空座：{{item.site}}"
   price="{{item.price}}"
   desc="司机：{{item.username}}"
   title="{{item.out}}——>{{item.incar}}"
@@ -13,7 +13,7 @@
     <van-tag plain type="success">出发日期:20{{item.time}}至20{{item.time1}}</van-tag>
    
   </view>
-   <view slot="tags">  <van-tag plain type="primary">订单号:{{item._id}}</van-tag></view>
+   <view slot="tags">  <van-tag plain type="primary">hash:{{item._id}}</van-tag></view>
   <view slot="tags">  <van-tag plain type="primary">备注:{{item.beizhu}}</van-tag></view>
  
 </van-card>
