@@ -1,4 +1,5 @@
 // pages/userConsole/userConsole.js
+// 同上
 Page({
 
   data: {

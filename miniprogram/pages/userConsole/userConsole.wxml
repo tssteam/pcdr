@@ -1,4 +1,5 @@
 <!--pages/userConsole/userConsole.wxml-->
+<!--乘客订单完成的页面-->
 <view class="container">
 <view ><map class='map1'  longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location bindtap='getLocation' ></map></view> 
   <view class="list">

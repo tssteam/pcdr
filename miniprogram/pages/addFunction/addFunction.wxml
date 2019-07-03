@@ -1,5 +1,5 @@
 <!--pages/addFunction/addFunction.wxml-->
-
+<!--个人信息界面-->
 <form bindsubmit="formSubmit">
 <view class="container">
 

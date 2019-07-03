@@ -70,6 +70,7 @@ Page({
     })
   },
 
+// 隐藏熟悉状态判断
 yes:function(e){
   var that = this
    this.setData({
@@ -101,6 +102,7 @@ yes:function(e){
   
   },
 
+// 利用云函数加载所有乘客的订单信息
   onShow: function (options) {
  
     wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })

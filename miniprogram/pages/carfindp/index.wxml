@@ -1,4 +1,5 @@
 <!--pages/myinfo/myinfo.wxml-->
+<!--车找人下单页面每一个view模块对应一个前端模块-->
 <form bindsubmit="formSubmit">
 <view class="weui-cells weui-cells_after-title">
 

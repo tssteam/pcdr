@@ -45,7 +45,7 @@ Page({
 
 
   
-
+//
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -53,6 +53,8 @@ Page({
     })
   },
 
+  
+  //只要是第一次读取时间日期用的
   onLoad() {
     // 获取完整的年月日 时分秒，以及默认显示的数组
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
@@ -116,7 +118,7 @@ Page({
 
 
   
- 
+ //读取上一个城市选择页面传过来的函数，和下面的city是连着用的，city是点击跳转页面函数，然后选择的页面后设置了bs值，去判断选择的是页面一还是页面二，然后，分别利用选择条件准确得出了传回来的城市对象，并不断刷新读取出来。而点击函数往往做不到，随时更行对象的行为。
   onShow: function (options) {
     var that =this
      var chos=this.data.bs
@@ -150,6 +152,7 @@ Page({
 
 // 
 
+
   ppl:function(e){
      this.setData({
        yes:2
@@ -161,6 +164,7 @@ Page({
     })
   },
   
+ //暂时没有用到，之前是用来位置定位的
 getmap:function(e){
   var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js')
   var qqmapsdk
@@ -196,6 +200,7 @@ getmap:function(e){
   
 },
 
+//没用到
   switchChange: function (e) {
     if (e.detail.value) {
       this.setData({ cartype: '车找人' });
@@ -206,7 +211,7 @@ getmap:function(e){
     }
   },
 
-
+//改变上面车找人人找车按钮样式，然后判断选择的状态，yes等于多少就是跳转的选择状态多少
   button:function(e){
     this.setData({ yes: 2,
       bcolor:"warn",
@@ -214,7 +219,7 @@ getmap:function(e){
      })
 
   },
-
+//改变上面车找人人找车按钮样式
   button1: function (e) {
     this.setData({ yes: 1,
       bcolor: "",
@@ -229,7 +234,7 @@ getmap:function(e){
 
 
 
-
+//查询按钮同时将我们输入的信息资源储存到本地，让下一个页面使用
   formSubmit: function (e) {
     var s1 = e.detail.value.start
     var e1 = e.detail.value.end
@@ -244,7 +249,7 @@ getmap:function(e){
       success:console.log("ok")
       
       })
-
+//改变上面车找人人找车按钮样式，同时传回来判断值，然后使用判断值，跳转所需要的页面
     var text = this.data.yes;
     if (text == 1) {
 
@@ -282,7 +287,7 @@ getmap:function(e){
 
 
 
-
+// 没用，可能以后要用
   bindTimeChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -290,7 +295,7 @@ getmap:function(e){
     })
   },
 
-
+//没用，以后可能会用到。
   pickerTap: function () {
     var date = new Date();
 
@@ -477,17 +482,19 @@ getmap:function(e){
       minute.push(i);
     }
   },
+//上面这一堆东西都没用到，或许以后会有用
 
 
 
-
-
+//分享功能
   onShareAppMessage: function () {
     return {
       title: '拼车达人(美国版)',
       path: 'pages/index/index'
     }
   },
+
+  //城市选择页面跳转
   city:function(){
      this.setData({
       bs:1

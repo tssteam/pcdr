@@ -26,6 +26,7 @@ Page({
     // },2000)
 
   },
+     // 绑定点击函数，将点击的对象储存到本地中去，让其他页面可以使用储存的对象，看下面的返回去页面
   bindtap(e) {
     var name = e.detail.name
     console.log(name)

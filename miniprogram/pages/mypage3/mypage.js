@@ -1,3 +1,4 @@
+// 利用加载刷选过后的司机的订单信息逻辑页面
 const db = wx.cloud.database({});
 const carfindp = db.collection('carfindp');
 Page({

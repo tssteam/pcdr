@@ -33,6 +33,8 @@ Page({
 
   },
 
+
+// p位置使用函数
   getLocation: function () {
     var that = this
     wx.getLocation({
@@ -56,6 +58,8 @@ Page({
     })
   },
 
+
+// 暂时没用到，下次有机会使用
   onReady: function () {
 
     that2 = this
@@ -92,7 +96,6 @@ Page({
 
 
    end: function () {
-
 
 
     var b = []
@@ -142,6 +145,7 @@ Page({
 
 
 
+// 转发功能
 
   onShareAppMessage: function (ops) {
     if (ops.from === 'button') {
@@ -167,6 +171,8 @@ Page({
 
   },
 
+
+// 拿到上一个界面传回来的状态，显示从哪里到哪里
   onLoad: function (options) {
     console.log("接收到的参数是=" + options.pc)
     this.data.pc = JSON.parse(options.pc);
@@ -180,6 +186,8 @@ Page({
      
     );
   },
+
+  // 订单界面
   order:function(){
     wx.navigateTo({
       url: '../myinfo1/myinfo1',
@@ -188,7 +196,7 @@ Page({
   },
 
 
-
+// 所有xx的界面
   mypage:function(){
 
     wx.navigateTo({

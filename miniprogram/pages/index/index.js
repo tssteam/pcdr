@@ -10,18 +10,24 @@ Page({
     requestResult: '',
     name:'点击头像登录'
   },
+
+
+//乘客页面入口
 open:function(){
 
     wx.navigateTo({
       url: '../myinfo1/myinfo1'
     })
 },
-  open1: function () {
+ //司机页面入口
+open1: function () {
 
     wx.navigateTo({
       url: '../myinfo2/myinfo1'
     })
   },
+
+  //读取登录状态
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({
@@ -51,7 +57,7 @@ open:function(){
       }
     })
   },
-
+//登录状态保存
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
       this.setData({
@@ -61,7 +67,7 @@ open:function(){
       })
     }
   },
-
+//没用到
   onGetOpenid: function() {
     // 调用云函数
     wx.cloud.callFunction({
@@ -83,7 +89,7 @@ open:function(){
     })
   },
 
-  // 上传图片
+  // 上传图片没用到
   doUpload: function () {
     // 选择图片
     wx.chooseImage({

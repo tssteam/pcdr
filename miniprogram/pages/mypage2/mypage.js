@@ -1,3 +1,4 @@
+// 利用加载刷选过后的乘客的订单信息逻辑页面
 const db = wx.cloud.database({});
 const user = db.collection('user');
 var dateTimePicker = require('../../utils/dateTimePicker.js');
@@ -84,7 +85,7 @@ Page({
 
 
 
-
+// 从home传过来的储存出发点和到达点使用，例如从xxx到xxx
 
   onShow: function (options) {
     wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })

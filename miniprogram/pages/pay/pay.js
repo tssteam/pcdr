@@ -1,3 +1,4 @@
+// 支付页面，暂时没用到，懒得删除。下次可以省点功夫。
 // pages/myinfo/myinfo.js
 Page({
 

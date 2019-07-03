@@ -1,4 +1,4 @@
-
+<!--item1-5之类都是查看订单页面分别对应着mypage传过来的ID所查看的信息页面-->
 <view class='container' wx:for="{{list}}" style='display:block;'>
   <view class='item'>
     <view class='left'>名字</view>

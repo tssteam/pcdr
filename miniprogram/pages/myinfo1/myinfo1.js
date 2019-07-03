@@ -1,5 +1,5 @@
 // pages/myinfo1/myinfo1.js
-
+// 利用云函数加载数据使用者ID订单状态的数据
 Page({
 
   /**
@@ -15,6 +15,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  // 因为数据会发生变化，所以要实时更新，和登录状态校对，只能查找个人的乘客订单信息
   onShow: function (options) {
     wx.getSetting({
       success: res => {

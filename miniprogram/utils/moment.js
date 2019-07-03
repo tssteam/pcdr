@@ -1,3 +1,4 @@
+// 没用到，可能下次用
 var Moment = function (date) {
   var date;
   if (date)

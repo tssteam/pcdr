@@ -24,6 +24,7 @@ Page({
       this.setData({ sex: '女' });
     }
   },
+// 提交信息上传到数据库和缓存到本地，让其他页面读取
 
   formSubmit: function (e) {
     var n2 = e.detail.value.name

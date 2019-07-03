@@ -1,4 +1,6 @@
 <!--index.wxml-->
+<!--就是我的页面-->
+
 <view class="container">
 
   <!-- 用户 openid -->

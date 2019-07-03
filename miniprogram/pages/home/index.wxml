@@ -1,4 +1,5 @@
  <form bindsubmit="formSubmit">
+ <!--主页面每一个view对应每一个板块，包括样式设计都是我调整计算出来的-->
 <view class="page" >
  <!--页头-->
   <view class="head1">      

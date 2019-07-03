@@ -29,6 +29,8 @@ Page({
     zt: "没完成",
     pc: { pcin: '起点', pcout: '终点' }
   },
+
+  // 之前男女性别转换按钮函数
   switchChange: function (e) {
     if (e.detail.value) {
       this.setData({ sex: '男' });
@@ -36,7 +38,7 @@ Page({
       this.setData({ sex: '女' });
     }
   },
-
+// 沿途拼车按钮
   switchChange2: function (e) {
     if (e.detail.value) {
       this.setData({ pcar: '是' });
@@ -44,6 +46,8 @@ Page({
       this.setData({ pcar: '否' });
     }
   },
+
+  // 日期选择
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -52,7 +56,7 @@ Page({
   },
 
 
-
+// 之前说要做选择框的男女选择函数
   checkboxChange: function (e) {
     if (e.detail.value) {
       this.setData({ sex: '男' });
@@ -65,7 +69,7 @@ Page({
 
 
 
-
+// 小程序页面加载读取
   onLoad() {
     // 获取完整的年月日 时分秒，以及默认显示的数组
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
@@ -77,6 +81,8 @@ Page({
       dateTimeArray1: obj.dateTimeArray,
       dateTime1: obj.dateTime
 	});
+
+  // 本地内存拿出来，之前addfunction的储存对象，包括微信的名字，城市，电话，用户名
 	var that = this 
     wx.getStorage({
       key: 'mysec1',
@@ -92,6 +98,8 @@ Page({
 
     })
   },
+
+  // 都是日期的函数
   changeDate(e) {
     this.setData({ date: e.detail.value });
   },
@@ -129,6 +137,9 @@ Page({
   },
 
 
+
+
+// 
   bindPickerChange1(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -136,6 +147,7 @@ Page({
     })
   },
 
+// 出发城市选择函数
   city: function () {
     this.setData({
       bs: 1
@@ -146,6 +158,8 @@ Page({
     })
   },
 
+
+// 到达城市选择函数
   city1: function () {
     this.setData({
       bs: 2
@@ -158,12 +172,15 @@ Page({
 
 
 
-
+// 页面不断加载，为了不断刷新城市多次选择，所以不用onload
   onShow: function (options) {
     var that = this
     var chos = this.data.bs
     console.log(chos)
+    // 利用定义的变量chos作为选择状态，如果为1就是选择出发城市，然后读取准确加载到前端页面上
     if (chos == 1) {
+
+      // 出发城市读取上一个界面传回来的城市数据
       wx.getStorage({
         key: 'mydata4',
         success: function (res) {
@@ -177,6 +194,7 @@ Page({
 
       })
     } if (chos == 2) {
+      // 同上
       wx.getStorage({
         key: 'mydata5',
 
@@ -201,7 +219,7 @@ Page({
 
 
 
-
+// 拼车选择按钮函数
   switchChange1: function (e) {
     if (e.detail.value) {
       this.setData({ cartype: '拼车' });
@@ -256,6 +274,7 @@ Page({
 
   },
 
+// 提交函数，将数据储存到云端，两个隐含的属性，一个是状态，一个是完成度
   formSubmit: function (e) {
     console.log("修改")
     const db = wx.cloud.database()
@@ -320,7 +339,7 @@ Page({
   },
 
 
- 
+ // 查询函数，没有用到，可能以后会用到。
   onQuery: function (e) {
     const db = wx.cloud.database()
     // 查询当前用户所有的 counters

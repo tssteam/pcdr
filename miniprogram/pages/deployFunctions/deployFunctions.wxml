@@ -1,4 +1,7 @@
 <!--pages/deployFunctions/deployFunctions.wxml-->
+
+<!--没用到，但是用来提醒你们，流程怎么走-->
+
 <view class="container">
 
   <view class="list">

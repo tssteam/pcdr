@@ -1,4 +1,4 @@
-
+   // 该页面暂时没用到，以后会用到
 var Moment = require("../../utils/moment.js");
 var DATE_YEAR = new Date().getFullYear();
 var DATE_MONTH = new Date().getMonth() + 1;
