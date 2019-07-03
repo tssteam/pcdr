@@ -1,6 +1,6 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-
+// 对应的乘客所有信息页面函数入口
 cloud.init()
 const db = cloud.database();
 // 云函数入口函数
