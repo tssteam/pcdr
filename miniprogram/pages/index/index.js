@@ -8,19 +8,19 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    name:'点击头像登录'
+    name: '点击头像登录'
   },
 
 
-//乘客页面入口
-open:function(){
+  //乘客页面入口
+  open: function() {
 
     wx.navigateTo({
       url: '../myinfo1/myinfo1'
     })
-},
- //司机页面入口
-open1: function () {
+  },
+  //司机页面入口
+  open1: function() {
 
     wx.navigateTo({
       url: '../myinfo2/myinfo1'
@@ -36,28 +36,38 @@ open1: function () {
       return
     }
 
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        console.log('[云函数] [login] user openid: ', res.result.openid)
+        app.globalData.openid = res.result.openid
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
-            
             success: res => {
               console.log(res.userInfo),
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo,
-                name:res.userInfo.nickName
-
-              })
+                this.setData({
+                  avatarUrl: res.userInfo.avatarUrl,
+                  userInfo: res.userInfo,
+                  name: res.userInfo.nickName
+                })
             }
           })
         }
       }
     })
   },
-//登录状态保存
+  //登录状态保存
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
       this.setData({
@@ -67,7 +77,7 @@ open1: function () {
       })
     }
   },
-//没用到
+  //没用到
   onGetOpenid: function() {
     // 调用云函数
     wx.cloud.callFunction({
@@ -90,20 +100,20 @@ open1: function () {
   },
 
   // 上传图片没用到
-  doUpload: function () {
+  doUpload: function() {
     // 选择图片
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
-      success: function (res) {
+      success: function(res) {
 
         wx.showLoading({
           title: '上传中',
         })
 
         const filePath = res.tempFilePaths[0]
-        
+
         // 上传图片
         const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
         wx.cloud.uploadFile({
@@ -115,7 +125,7 @@ open1: function () {
             app.globalData.fileID = res.fileID
             app.globalData.cloudPath = cloudPath
             app.globalData.imagePath = filePath
-            
+
             wx.navigateTo({
               url: '../storageConsole/storageConsole'
             })
