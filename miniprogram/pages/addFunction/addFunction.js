@@ -13,24 +13,10 @@ exports.main = (event, context) => {
 Page({
 
   data: {
-    cartype: '拼车',
-    result: '',
-    sex: '男',
     canIUseClipboard: wx.canIUse('setClipboardData'),
     userinfoexist: undefined, //用户信息是否存在
     userinfodocid: undefined, //数据库的docid
     userinfoFormData: {}
-  },
-  switchChange: function(e) {
-    if (e.detail.value) {
-      this.setData({
-        sex: '男'
-      });
-    } else {
-      this.setData({
-        sex: '女'
-      });
-    }
   },
   // 提交信息上传到数据库和缓存到本地，让其他页面读取
 
@@ -51,8 +37,8 @@ Page({
       },
       success: console.log("ok")
     })
-    if (this.data.userinfoexist != undefined) {
-      if (this.data.userinfoexist === false) {
+    if (app.globalData.userinfoexist = false != undefined) {
+      if (app.globalData.userinfoexist = false === false) {
         db.collection('oneuser').add({
           data: {
             wxname: e.detail.value.wxname,
@@ -73,10 +59,11 @@ Page({
             wx.showToast({
               title: '用户信息已登记',
             })
-            this.setData({
-              userinfoexist: true
-            })
+            app.globalData.userinfoexist = true
             console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+            wx.switchTab({
+              url: '../home/index', 
+            })
           },
           fail: err => {
             wx.showToast({
@@ -87,7 +74,7 @@ Page({
           }
         })
       } else {
-        db.collection('oneuser').doc(this.data.userinfodocid).update({
+        db.collection('oneuser').doc(app.globalData.userinfodocid).update({
           data: {
             wxname: e.detail.value.wxname,
             prov: e.detail.value.prov,
@@ -161,7 +148,7 @@ Page({
       "_openid": app.globalData.openid
     }).get().then(res => {
       console.log(res)
-      if (res.data.length != 0) {
+      if (res.data.length != 0) { //数据不存在
         let datatmp = res.data[0]
         console.log(datatmp)
         let formtemp = {

@@ -1,183 +1,179 @@
 <!--pages/myinfo/myinfo.wxml-->
 <!--车找人下单页面每一个view模块对应一个前端模块-->
 <form bindsubmit="formSubmit">
-<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cells weui-cells_after-title">
 
-<view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">微信号</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" type='number'  name="wxname" placeholder="请输入微信号" value='wxname'/>
-                </view>
-            </view>
-            <view class="weui-cell weui-cell_input">
-
-           
-               
-            </view>
-
- 
- 
- 
- <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">出发地</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input"
-                     type="text"  bindtap='city' value='{{city}}'
-                     name="out" placeholder="请选择出发地" />
-                </view>
-            </view>
-            <view class="weui-cell weui-cell_input">
-               
-            </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">微信号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type='number' name="wxname" placeholder="请输入微信号" value="{{wxname}}" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
 
 
 
-            <view class="weui-cell weui-cell_input">
-
-           
- <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">出发地备注</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="outname" placeholder="请输入备注信息" value='Manhattan'/>
-                </view>
-            </view>
-            <view class="weui-cell weui-cell_input">
-               </view>
-            </view>
+    </view>
 
 
 
-              <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">目的地</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" 
-                     type="text"  bindtap='city1' value='{{city1}}'
-                    name="incar" placeholder="请选择目的地" />
-                </view>
-            </view>
-            
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出发地</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="text" bindtap='city' value='' name="out" placeholder="请选择出发地" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+
+    </view>
 
 
- <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">目的地备注</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="inname" placeholder="请输入备注信息" value='Manhattan'/>
-                </view>
-            </view>
-            <view class="weui-cell weui-cell_input">
-               
-            </view>
 
-            
-            <view class="weui-cell weui-cell_input">
-               
-            </view>
-			
-<view class="weui-cell weui-cell_input">
-	<view class="weui-cell__hd">
-		<view class="weui-label">出发时间 </view>
-	</view>
-	<view class="weui-cell__bd">
-		<picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="weui-input" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
-			{{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
-		</picker>
-		--
-		<picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="weui-input" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
-			{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
-		</picker>
-	</view>
-</view>
+    <view class="weui-cell weui-cell_input">
 
- 
-
- 
-<view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">价格</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input type='number' class="weui-input" name="price" placeholder="请输入价格" value='40'/>
-                </view>
-            </view>
-
- 
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">手机号码</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="phone"  type='number' placeholder="请输入手机号码" value='15220229042'/>
-                </view>
-            </view>
- 
-
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">姓名</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="username" placeholder="请输入姓名" value='lizhuoxuan' />
-                </view>
-            </view>
-
-
-              <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">类型</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="cartype" value='{{cartype}}'/>
-                </view>
-                <view class="weui-cell__ft">
-                       <switch checked bindchange='switchChange1'/>
-                </view>
-            </view>
-   <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">空位</view>
-                </view>
-                <view class="weui-cell__bd">
-                   <picker  class="weui-input" bindchange="bindPickerChange" name="site"  value="{{index}}" range="{{array}}">
-{{array[index]}}
-  </picker>
-                </view>
-            </view>
 
       <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">沿途拼车</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="pcar" value='{{pcar}}'/>
-                </view>
-                <view class="weui-cell__ft">
-                       <switch checked bindchange='switchChange2'/>
-                </view>
-            </view>
-
-
-
-
-             <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">备注</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="beizhu"  placeholder="宠物，吸烟，行李" value='' />
-                </view>
-            </view>
+        <view class="weui-cell__hd">
+          <view class="weui-label">出发地备注</view>
         </view>
-        <view class="btn-area">
-         <button type='primary' formType="submit">提交</button>
-         </view>
-        </form>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="outname" placeholder="请输入备注信息" value='' />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+      </view>
+    </view>
+
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">目的地</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="text" bindtap='city1' value='{{city1}}' name="incar" placeholder="请选择目的地" />
+      </view>
+    </view>
+
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">目的地备注</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="inname" placeholder="请输入备注信息" value='' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出发时间 </view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="weui-input" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
+        </picker>
+        --
+        <picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="weui-input" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
+          {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
+        </picker>
+      </view>
+    </view>
+
+
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">价格</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input type='number' class="weui-input" name="price" placeholder="请输入价格" value='40' />
+      </view>
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">手机号码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="phone" type='number' placeholder="请输入手机号码" value="{{phone}}" />
+      </view>
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="username" placeholder="请输入姓名" value="{{username}}" />
+      </view>
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">类型</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="cartype" value='{{cartype}}' />
+      </view>
+      <view class="weui-cell__ft">
+        <switch checked bindchange='switchChange1' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">空位</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker class="weui-input" bindchange="bindPickerChange" name="site" value="{{index}}" range="{{array}}">
+          {{array[index]}}
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">沿途拼车</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="pcar" value='{{pcar}}' />
+      </view>
+      <view class="weui-cell__ft">
+        <switch checked bindchange='switchChange2' />
+      </view>
+    </view>
+
+
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">备注</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="beizhu" placeholder="宠物，吸烟，行李" value='' />
+      </view>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button type='primary' formType="submit">提交</button>
+  </view>
+</form>

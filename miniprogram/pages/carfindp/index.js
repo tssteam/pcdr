@@ -87,6 +87,7 @@ Page({
     wx.getStorage({
       key: 'mysec1',
       success: function (res) {
+        console.log(res)
         that.setData({
           wxname: res.data.wx2,
           city: res.data.c2,

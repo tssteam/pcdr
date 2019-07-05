@@ -1,0 +1,5 @@
+<!--miniprogram/pages/splash/splash.wxml-->
+<view style="text-align: center;">
+  <h1 >拼车达人美国版</h1>
+  <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image>
+</view>

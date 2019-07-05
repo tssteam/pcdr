@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/splash/splash",
     "pages/home/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -30,7 +31,6 @@
     "pages/ite5/item",
     "pages/cal/index",
     "pages/userConsole1/userConsole"
-    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -39,7 +39,7 @@
     "navigationBarTitleText": "拼车达人（美国版）",
     "navigationBarTextStyle": "black"
   },
-  "cloud":true,
+  "cloud": true,
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息被计算"
