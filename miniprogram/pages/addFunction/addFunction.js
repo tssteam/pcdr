@@ -38,7 +38,7 @@ Page({
       success: console.log("ok")
     })
     if (app.globalData.userinfoexist = false != undefined) {
-      if (app.globalData.userinfoexist = false === false) {
+      if (app.globalData.userinfoexist === false) {
         db.collection('oneuser').add({
           data: {
             wxname: e.detail.value.wxname,
