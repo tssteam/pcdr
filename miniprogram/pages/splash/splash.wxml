@@ -1,8 +1,11 @@
 <!--miniprogram/pages/splash/splash.wxml-->
-<view style="text-align: center;">
-
-  <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image>
-  <view class='body'>拼车达人</view>
-  <view class='body2'>与你同行</view>
-  
+<view class='all'>
+<view><image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/lf.png'></image></view>
+  <view class='body'>多少个夏天</view>
+  <view class='body1'>我们风雨兼程</view>
+    <view class='body2'>多少个冬天</view>
+    <view class='body3'>我们温暖无阻</view>
+     <view class='body4'>拼车达人</view>
+        <view class='body5'>与你同行</view>
+  <image class='image' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/01300000325519123771007615401.jpg'></image>
 </view>
