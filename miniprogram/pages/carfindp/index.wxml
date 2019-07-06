@@ -12,12 +12,7 @@
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
-
-
-
     </view>
-
-
 
 
     <view class="weui-cell weui-cell_input">
@@ -35,16 +30,13 @@
 
 
     <view class="weui-cell weui-cell_input">
-
-
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">出发地备注</view>
-        </view>
+         <view class="weui-cell__hd">
+        <view class="weui-label">出发地备注</view>
+      </view>
         <view class="weui-cell__bd">
           <input class="weui-input" name="outname" placeholder="请输入备注信息" value='' />
         </view>
-      </view>
+      
       <view class="weui-cell weui-cell_input">
       </view>
     </view>
@@ -61,7 +53,6 @@
     </view>
 
 
-
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
         <view class="weui-label">目的地备注</view>
@@ -71,12 +62,8 @@
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
-
     </view>
-
-
     <view class="weui-cell weui-cell_input">
-
     </view>
 
     <view class="weui-cell weui-cell_input">

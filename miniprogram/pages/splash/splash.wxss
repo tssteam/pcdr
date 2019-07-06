@@ -1,1 +1,14 @@
 /* miniprogram/pages/splash/splash.wxss */
+.body{
+  height: 200rpx;
+  width: 100%;
+  color: green;
+  font-size: 50rpx;
+
+}
+.body2{
+  height: 200rpx;
+  width: 100%;
+  color: red;
+    font-size: 50rpx;
+}
