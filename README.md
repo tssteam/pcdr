@@ -13,3 +13,9 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+
+
+https://nervjs.github.io/taro/docs/taroize.html
+微信原生小程序转 Taro 的操作非常简单，首先必须安装使用 npm i -g @tarojs/cli 安装 Taro 命令行工具，其次在命令行中定位到小程序项目的根目录，根目录中运行：
+$ taro convert
+即可完成转换。转换后的代码保存在根目录下的 taroConvert 文件夹下。你需要定位到 taroConvert 目录执行 npm install 命令之后就可以使用 taro build 命令编译到对应平台的代码。
