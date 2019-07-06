@@ -22,8 +22,8 @@ Page({
     rightValue1: 1500, //右边滑块默认值
     leftWidth1: '50', //左边滑块可滑动长度：百分比
     rightWidth1: '50', //右边滑块可滑动长度：百分比
-    outp:"起点",
-    inp:"终点",
+    outp: "起点",
+    inp: "终点",
     order_list1: [],
     avatarUrl: "cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg"
   },
@@ -32,22 +32,53 @@ Page({
     wx.stopPullDownRefresh()
   },
 
+  onLoad() {
+    var that = this;
+    wx.getStorage({
+      key: 'mysec',
+      success: function(res) {
+        that.setData({
+          outp: res.data.s1,
+          inp: res.data.e1,
+        })
+        db.collection('carfindp').where({
+            out: res.data.s1,
+            incar: res.data.e1,
+            // site: res.data.pep1,
+            time: res.data.st1,
+            time1: res.data.ed1,
+          }
+        ).get({
+          success: res => {
+            console.log(res.data)
+            that.setData({
+              order_list1: res.data,
+            })
+          }
+        })
+      },
+    })
+  },
 
   // 遮罩层显示
-  show: function () {
-    this.setData({ flag: false })
+  show: function() {
+    this.setData({
+      flag: false
+    })
     wx.navigateTo({
       url: '../cal/index',
     })
   },
   // 遮罩层隐藏
-  conceal: function () {
-    this.setData({ flag: true })
+  conceal: function() {
+    this.setData({
+      flag: true
+    })
   },
 
 
   // 左边滑块滑动的值
-  leftChange: function (e) {
+  leftChange: function(e) {
     console.log('左边改变的值为：' + e.detail.value);
     var that = this;
     that.setData({
@@ -55,7 +86,7 @@ Page({
     })
   },
   // 右边滑块滑动的值
-  rightChange: function (e) {
+  rightChange: function(e) {
     console.log('右边改变的值为：' + e.detail.value);
     var that = this;
     that.setData({
@@ -64,7 +95,7 @@ Page({
   },
 
   // 左边滑块滑动的值
-  leftChange1: function (e) {
+  leftChange1: function(e) {
     console.log('左边改变的值为：' + e.detail.value);
     var that = this;
     that.setData({
@@ -72,7 +103,7 @@ Page({
     })
   },
   // 右边滑块滑动的值
-  rightChange1: function (e) {
+  rightChange1: function(e) {
     console.log('右边改变的值为：' + e.detail.value);
     var that = this;
     that.setData({
@@ -87,39 +118,9 @@ Page({
 
 
 
-  onShow: function (options) {
-    wx.setNavigationBarTitle({ title: '拼车达人(美国版)' })
-    var that = this;
-    wx.getStorage({
-      key: 'mysec',
-      success: function (res) {
-        that.setData({
-          outp: res.data.s1,
-          inp: res.data.e1,
-        })
-        db.collection('carfindp').where({
-          out: res.data.s1,
-          incar: res.data.e1,
-          site: res.data.pep1,
-          time: res.data.st1,
-          time1: res.data.ed1,
-        }
-
-        ).get({
-          success: res => {
-            console.log(res.data)
-            that.setData({
-              order_list1: res.data,
-            })
-
-          }
-        })
-      },
-
-
+  onShow: function(options) {
+    wx.setNavigationBarTitle({
+      title: '拼车达人(美国版)'
     })
-
-
-
   },
 })

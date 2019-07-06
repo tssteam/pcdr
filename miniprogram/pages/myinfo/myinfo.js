@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // pages/myinfo/myinfo.js
 var dateTimePicker = require('../../utils/dateTimePicker.js');
 Page({
@@ -260,8 +254,8 @@ Page({
     db.collection('user').add({
       data: {
         wxname: e.detail.value.wxname,
-        out:e.detail.value.out,
-        incar: e.detail.value.incar,
+        out:e.detail.value.out, //出发地
+        incar: e.detail.value.incar, //目的地
         price: e.detail.value.price,
         username: e.detail.value.username,
         phone: e.detail.value.phone,

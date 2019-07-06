@@ -37,7 +37,7 @@ Page({
       },
       success: console.log("ok")
     })
-    if (app.globalData.userinfoexist = false != undefined) {
+    if (app.globalData.userinfoexist != undefined) {
       if (app.globalData.userinfoexist === false) {
         db.collection('oneuser').add({
           data: {
