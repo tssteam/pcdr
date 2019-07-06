@@ -4,7 +4,7 @@ const carfindp = db.collection('carfindp');
 Page({
   data: {
     show: false,
-
+    // 注释掉无用的数据
     leftMin: 0, //左边滑块最小值
     leftMax: 1200, //左边滑块最大值
     rightMin: 1300, //右边滑块的最小值

@@ -16,7 +16,7 @@ Page({
     yes: 1,
     bs: 1,
     bcolor: '',
-    bcolor1: '',
+    bcolor1: 'warn', //初始化按钮颜色
     date: '2018-10-01',
     time: '12:00',
     dateTimeArray: null,
@@ -94,7 +94,7 @@ Page({
             }
           })
         }
-        
+
       }
     })
 
@@ -172,34 +172,34 @@ Page({
 
   //读取上一个城市选择页面传过来的函数，和下面的city是连着用的，city是点击跳转页面函数，然后选择的页面后设置了bs值，去判断选择的是页面一还是页面二，然后，分别利用选择条件准确得出了传回来的城市对象，并不断刷新读取出来。而点击函数往往做不到，随时更行对象的行为。
   onShow: function(options) {
-    var that = this
-    var chos = this.data.bs
-    if (chos == 1) {
-      wx.getStorage({
-        key: 'mydata',
-        success: function(res) {
-          that.setData({
-            city1: res.data.name,
+    // var that = this
+    // var chos = this.data.bs
+    // if (chos == 1) {
+    //   wx.getStorage({
+    //     key: 'mydata',
+    //     success: function(res) {
+    //       that.setData({
+    //         city1: res.data.name,
 
 
-          })
-        },
+    //       })
+    //     },
 
 
-      })
-    }
-    if (chos == 2) {
-      wx.getStorage({
-        key: 'mydata1',
-        success: function(res) {
-          that.setData({
-            city: res.data.name1,
+    //   })
+    // }
+    // if (chos == 2) {
+    //   wx.getStorage({
+    //     key: 'mydata1',
+    //     success: function(res) {
+    //       that.setData({
+    //         city: res.data.name1,
 
-          })
-        },
+    //       })
+    //     },
 
-      })
-    }
+    //   })
+    // }
 
   },
 
@@ -563,22 +563,14 @@ Page({
 
   //城市选择页面跳转
   city: function() {
-    this.setData({
-      bs: 1
-
-    })
     wx.navigateTo({
-      url: '../demo/demo'
+      url: `../locationpicker/locationpicker?dataoption=1`
     })
   },
 
   city1: function() {
-    this.setData({
-      bs: 2
-
-    })
     wx.navigateTo({
-      url: '../demo1/demo1'
+      url: `../locationpicker/locationpicker?dataoption=2`
     })
   },
 

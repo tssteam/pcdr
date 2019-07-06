@@ -150,24 +150,24 @@ Page({
 
 // 出发城市选择函数
   city: function () {
-    this.setData({
-      bs: 1
+    // this.setData({
+    //   bs: 1
 
-    })
+    // })
     wx.navigateTo({
-      url: '../demo4/demo3'
+      url: `../locationpicker/locationpicker?dataoption=1`
     })
   },
 
 
 // 到达城市选择函数
   city1: function () {
-    this.setData({
-      bs: 2
+    // this.setData({
+    //   bs: 2
 
-    })
+    // })
     wx.navigateTo({
-      url: '../demo5/demo3'
+      url: `../locationpicker/locationpicker?dataoption=2`
     })
   },
 
@@ -175,40 +175,40 @@ Page({
 
 // 页面不断加载，为了不断刷新城市多次选择，所以不用onload
   onShow: function (options) {
-    var that = this
-    var chos = this.data.bs
-    console.log(chos)
-    // 利用定义的变量chos作为选择状态，如果为1就是选择出发城市，然后读取准确加载到前端页面上
-    if (chos == 1) {
+    // var that = this
+    // var chos = this.data.bs
+    // console.log(chos)
+    // // 利用定义的变量chos作为选择状态，如果为1就是选择出发城市，然后读取准确加载到前端页面上
+    // if (chos == 1) {
 
-      // 出发城市读取上一个界面传回来的城市数据
-      wx.getStorage({
-        key: 'mydata4',
-        success: function (res) {
-          console.log(1),
-            that.setData({
-              city: res.data.name4,
+    //   // 出发城市读取上一个界面传回来的城市数据
+    //   wx.getStorage({
+    //     key: 'mydata4',
+    //     success: function (res) {
+    //       console.log(1),
+    //         that.setData({
+    //           city: res.data.name4,
 
-            })
-        },
+    //         })
+    //     },
 
 
-      })
-    } if (chos == 2) {
-      // 同上
-      wx.getStorage({
-        key: 'mydata5',
+    //   })
+    // } if (chos == 2) {
+    //   // 同上
+    //   wx.getStorage({
+    //     key: 'mydata5',
 
-        success: function (res) {
-          console.log(2),
-            that.setData({
-              city1: res.data.name5,
+    //     success: function (res) {
+    //       console.log(2),
+    //         that.setData({
+    //           city1: res.data.name5,
 
-            })
-        },
+    //         })
+    //     },
 
-      })
-    }
+    //   })
+    // }
 
   },
 
