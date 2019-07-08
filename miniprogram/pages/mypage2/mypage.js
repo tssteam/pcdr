@@ -30,6 +30,56 @@ Page({
     avatarUrl: "cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg"
   },
 
+  onLoad(){
+    var that = this;
+    that.setData({
+      leftValue1: e.detail.value //设置左边当前值
+    })
+  },
+  // 右边滑块滑动的值
+  rightChange1: function (e) {
+    console.log('右边改变的值为：' + e.detail.value);
+    var that = this;
+    that.setData({
+      rightValue1: e.detail.value,
+    })
+  },
+
+
+
+  // 从home传过来的储存出发点和到达点使用，例如从xxx到xxx
+
+  onShow: function (options) {
+    wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })
+    var that = this;
+    wx.getStorage({
+      key: 'mysec',
+      success: function (res) {
+        that.setData({
+          outp: res.data.s1,
+          inp: res.data.e1,
+        })
+        console.log('存储的数据')
+        console.log(res.data)
+        db.collection('user').where({
+          out: res.data.s1,
+          incar: res.data.e1,
+          // site: res.data.pep1, //座位
+          time: res.data.st1,
+          time1: res.data.ed1,
+        }
+        ).get({
+          success: res => {
+            console.log(res.data)
+            that.setData({
+              order_list: res.data,
+            })
+          }
+        })
+      },
+    })
+  },
+
   onPullDownRefresh() {
     wx.stopPullDownRefresh()
   },
@@ -69,56 +119,5 @@ Page({
   // 左边滑块滑动的值
   leftChange1: function (e) {
     console.log('左边改变的值为：' + e.detail.value);
-    var that = this;
-    that.setData({
-      leftValue1: e.detail.value //设置左边当前值
-    })
-  },
-  // 右边滑块滑动的值
-  rightChange1: function (e) {
-    console.log('右边改变的值为：' + e.detail.value);
-    var that = this;
-    that.setData({
-      rightValue1: e.detail.value,
-    })
-  },
-
-
-
-// 从home传过来的储存出发点和到达点使用，例如从xxx到xxx
-
-  onShow: function (options) {
-    wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })
-    var that = this;
-    wx.getStorage({
-      key: 'mysec',
-      success: function (res) {
-        that.setData({
-         outp:res.data.s1,
-         inp:res.data.e1,
-        })
-        db.collection('user').where({
-          out: res.data.s1,
-          incar: res.data.e1,
-          site:res.data.pep1,
-          time:res.data.st1,
-          time1:res.data.ed1,
-        }
-        ).get({
-          success: res => {
-            console.log(res.data)
-            that.setData({
-              order_list: res.data,
-            })
-
-          }
-        })   
-      },
-
-
-    })
-
-
- 
   },
 })

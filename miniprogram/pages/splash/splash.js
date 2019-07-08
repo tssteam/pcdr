@@ -86,7 +86,7 @@ Page({
             wx.switchTab({
               url: '../home/index', //页面跳转相对路径要写清楚且准确
             })
-          }, 2000)
+          }, 0)
         } else {
           console.log("用户信息不存在")
           app.globalData.userinfoexist = false
@@ -94,7 +94,7 @@ Page({
             wx.redirectTo({
               url: '../addFunction/addFunction',
             })
-          }, 1500)
+          }, 0)
         }
       })
     }).catch(err=>{

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // pages/myinfo/myinfo.js
 var dateTimePicker = require('../../utils/dateTimePicker.js');
 Page({
@@ -81,7 +75,7 @@ Page({
       dateTime1: obj.dateTime
     });
    var that = this 
-    wx.getStorage({
+    wx.getStorage({ //获取用户信息，从本地
       key: 'mysec1',
       success: function (res) {
           that.setData({
@@ -91,11 +85,7 @@ Page({
             username: res.data.n2,
           })
       },
-
-
     })
-
-
 
   },
   changeDate(e) {
@@ -135,12 +125,12 @@ Page({
   },
 
 
-  bindPickerChange1(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index1: e.detail.value
-    })
-  },
+  // bindPickerChange1(e) {
+  //   console.log('picker发送选择改变，携带值为', e.detail.value)
+  //   this.setData({
+  //     index1: e.detail.value
+  //   })
+  // },
 
 
 
@@ -148,22 +138,24 @@ Page({
 
 
   city: function () {
-    this.setData({
-      bs: 1
+    // this.setData({
+    //   bs: 1
 
-    })
+    // })
+    //1:from
+    //2:to
     wx.navigateTo({
-      url: '../demo2/demo2'
+      url: `../locationpicker/locationpicker?dataoption=1`
     })
   },
 
   city1: function () {
-    this.setData({
-      bs: 2
+    // this.setData({
+    //   bs: 2
 
-    })
+    // })
     wx.navigateTo({
-      url: '../demo3/demo3'
+      url: '../locationpicker/locationpicker?dataoption=2'
     })
   },
 
@@ -171,36 +163,37 @@ Page({
 
 
   onShow: function (options) {
-    var that = this
-    var chos = this.data.bs
-    console.log(chos)
-    if (chos == 1) {
-      wx.getStorage({
-        key: 'mydata2',
-        success: function (res) {
-    console.log(1),
-          that.setData({
-            city: res.data.name2,
+    //console.log(this.data)
+    // var that = this
+    // var chos = this.data.bs
+    //console.log(chos)
+    // if (chos == 1) {
+    //   wx.getStorage({
+    //     key: 'mydata2',
+    //     success: function (res) {
+    // //console.log(1),
+    //       that.setData({
+    //         city: res.data.name2,
 
-          })
-        },
+    //       })
+    //     },
 
 
-      })
-    } if (chos == 2) {
-      wx.getStorage({
-        key: 'mydata3',
+    //   })
+    // } if (chos == 2) {
+    //   wx.getStorage({
+    //     key: 'mydata3',
         
-        success: function (res) {
-          console.log(2),
-          that.setData({
-            city1: res.data.name3,
+    //     success: function (res) {
+    //      // console.log(2),
+    //       that.setData({
+    //         city1: res.data.name3,
 
-          })
-        },
+    //       })
+    //     },
 
-      })
-    }
+    //   })
+    // }
 
   },
 
@@ -267,8 +260,8 @@ Page({
     db.collection('user').add({
       data: {
         wxname: e.detail.value.wxname,
-        out:e.detail.value.out,
-        incar: e.detail.value.incar,
+        out:e.detail.value.out, //出发地
+        incar: e.detail.value.incar, //目的地
         price: e.detail.value.price,
         username: e.detail.value.username,
         phone: e.detail.value.phone,

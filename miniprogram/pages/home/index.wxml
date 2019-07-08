@@ -14,9 +14,9 @@
 
  <view class="page__hd">
   <view class="head">
-    <input    type="text" name='start'  bindtap='city' value='{{city1}}'/>
+    <input    type="text" name='start'  bindtap='city' value='{{city}}'/>
     <image src="/images/to.png" class="to"></image>
-    <input bindtap='city1' name="end"  value='{{city}}' auto-focus/>
+    <input bindtap='city1' name="end"  value='{{city1}}' auto-focus/>
   </view>
  </view>
 
