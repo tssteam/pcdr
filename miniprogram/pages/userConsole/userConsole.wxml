@@ -1,26 +1,10 @@
 <!--pages/userConsole/userConsole.wxml-->
 <!--乘客订单完成的页面-->
 <view class="container">
-<view ><map class='map1'  longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="13" show-location bindtap='getLocation' ></map></view> 
-  <view class="list">
-    <view class="list-item" bindtap="testCgi">
-        <button class='share' id="shareBtn" open-type="share" hover-class="other-button-hover">
-        <image src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image>
-        分享
-        </button>
-
-    </view>
-    <view class="list-item" bindtap="testCgi">
-  
-    </view>
-  </view>
-
-
-  <view class="guide">
-    <text class="headline">订单完成页面</text>
-    <text class="p">1:从{{pin}}到{{pout}}</text>
-    <text class="p" bindtap='order'>2. 切换到"订单管理" </text>
-    <text class="p" bindtap='mypage'>3. 全部车主查询界面"</text>
-  </view>
-
+<image class='img' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/timg.jpg'></image>
+<view class='text'>发布成功</view>
+<view class='text1'>从{{pin}}到{{pout}}</view>
+<view class='text1'>转发到微信群，让更多人看到这条拼车信息</view>
+<button bindtap='zf'  id="shareBtn" open-type="share" class='bzf'>一键转发</button>
+<button bindtap='order' class='bod'>查看订单</button>
 </view>

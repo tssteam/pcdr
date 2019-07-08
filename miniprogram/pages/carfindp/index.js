@@ -55,7 +55,12 @@ Page({
     })
   },
 
+  cfp: function () {
+    wx.navigateTo({
+      url: '../bz1/bz1',
 
+    })
+  },
 // 之前说要做选择框的男女选择函数
   checkboxChange: function (e) {
     if (e.detail.value) {
@@ -72,6 +77,7 @@ Page({
 // 小程序页面加载读取
   onLoad() {
     // 获取完整的年月日 时分秒，以及默认显示的数组
+    wx.setNavigationBarTitle({ title: '车找人' })
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     // 精确到分的处理，将数组的秒去掉

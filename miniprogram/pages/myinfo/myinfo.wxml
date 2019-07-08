@@ -142,7 +142,7 @@
         <view class="weui-label">备注</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" name="beizhu" placeholder="宠物，吸烟，行李" value='' />
+        <input class="weui-input" name="beizhu" bindtap='pfc' placeholder="宠物，吸烟，行李" value='' />
       </view>
     </view>
 

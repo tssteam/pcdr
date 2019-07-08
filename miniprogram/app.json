@@ -1,5 +1,5 @@
 {
-  "pages": [
+ "pages": [
     "pages/splash/splash",
     "pages/home/index",
     "pages/userConsole/userConsole",
@@ -30,7 +30,9 @@
     "pages/ite4/item",
     "pages/ite5/item",
     "pages/cal/index",
-    "pages/userConsole1/userConsole"
+    "pages/userConsole1/userConsole",
+    "pages/bz/bz",
+    "pages/bz1/bz1"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

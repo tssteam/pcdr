@@ -1,11 +1,9 @@
 // pages/userConsole/userConsole.js
 var coors
-
 var that2
-
 Page({
-
   data: {
+    
    pc:{pcin:"",pcout:""},
    pin:'',
    pout:'',
@@ -138,22 +136,14 @@ Page({
 
 
 
-
-
-
-
-
-
-
 // 转发功能
 
-  onShareAppMessage: function (ops) {
+  zf: function (ops) {
     if (ops.from === 'button') {
       // 来自页面内转发按钮
       console.log(ops.target)
       console.log(this.data.id) //
-           //this.data.id 可以在Page({})里data中设定id
-
+          //this.data.id 可以在Page({})里data中设定id
     }
     return {
       title: '标签',

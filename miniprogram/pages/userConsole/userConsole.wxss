@@ -1,3 +1,30 @@
 /* pages/userConsole/userConsole.wxss */
 
-@import "../../style/guide.wxss";
+.bzf{
+  height: 100rpx;
+  width: 600rpx;
+  padding-left: 20rpx;
+  background-color: green;
+  color: white;
+  border-radius:20rpx; 
+}
+.bod{
+  height: 100rpx;
+  width: 600rpx;
+  padding-left: 20rpx;
+  border-radius:20rpx; 
+ margin-top: 40rpx;
+}
+.text{
+  font-size: 50rpx;
+  padding-bottom: 50rpx;
+}
+.text1{
+  font-size: 30rpx;
+  color: gainsboro;
+  padding-bottom: 150rpx;
+}
+.img{
+  height: 300rpx;
+  width: 300rpx;
+}

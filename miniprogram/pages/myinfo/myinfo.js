@@ -59,10 +59,16 @@ Page({
       this.setData({ sex: '女' });
     }
   },
-
+  pfc:function(){
+   wx.navigateTo({
+     url: '../bz/bz',
+    
+   })
+  },
 
   onLoad() {
     // 获取完整的年月日 时分秒，以及默认显示的数组
+    wx.setNavigationBarTitle({ title: '人找车' })
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
     // 精确到分的处理，将数组的秒去掉
