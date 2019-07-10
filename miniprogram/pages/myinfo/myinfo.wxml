@@ -4,6 +4,16 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="username" placeholder="请输入姓名" value='{{username}}' />
+      </view>
+    </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
         <view class="weui-label">微信号</view>
       </view>
       <view class="weui-cell__bd">
@@ -20,8 +30,9 @@
         <view class="weui-label">出发地</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" type="text" bindtap='city' value='{{city}}' name="out" placeholder="请选择出发地" />
+        <input class="weui-input" type="text"  value='{{city}}' name="out" placeholder="请选择出发地" />
       </view>
+    <image bindtap='city'  class='imge' src='/images/right.png'></image>
     </view>
     <view class="weui-cell weui-cell_input">
     </view>
@@ -32,7 +43,7 @@
         <view class="weui-label">出发地备注</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" name="outname" placeholder="请输入备注信息" value='' />
+        <input class="weui-input" name="outname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value='' />
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
@@ -45,8 +56,9 @@
         <view class="weui-label">目的地</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" name="incar" bindtap='city1' placeholder="请选择目的地" value='{{city1}}' />
+        <input class="weui-input" name="incar"  placeholder="请选择目的地" value='{{city1}}' />
       </view>
+        <image bindtap='city1'  class='imge' src='/images/right.png'></image>
     </view>
     <view class="weui-cell weui-cell_input">
 
@@ -57,36 +69,11 @@
         <view class="weui-label">目的地备注</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" name="inname" placeholder="请输入备注信息" value='' />
+        <input class="weui-input" name="inname" placeholder="请输入更详细的目的地地信息，如邮编，街道编号" value='' />
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
     </view>
-
-
-
-
-    <view class="weui-cell weui-cell_input">
-      <view class="weui-cell__hd">
-        <view class="weui-label">出发时间 </view>
-      </view>
-      <view class="weui-cell__bd">
-        <picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="weui-input" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
-          {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
-        </picker>--
-        <picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="weui-input" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
-          {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArra1y[3][dateTime1[3]]}}{{dateTimeArray1[4][dateTime1[4]]}}
-        </picker>
-
-      </view>
-    </view>
-
-
-
-    <view class="weui-cell weui-cell_input">
-    </view>
-
-
 
 
 
@@ -97,33 +84,29 @@
       <view class="weui-cell__bd">
         <picker class="weui-input" bindchange="bindPickerChange" name="site" value="{{index}}" range="{{array}}">
           {{array[index]}}</picker>
-
-
       </view>
-    </view>
+    <view class="input1">
+        <view class='xls' >行李数</view>
 
-
-    <view class="weui-cell weui-cell_input">
-      <view class="weui-cell__hd">
-        <view class="weui-label">手机号</view>
-      </view>
-      <view class="weui-cell__bd">
-        <input class="weui-input" name="phone" type='number' placeholder="请输入手机号码" value='{{phone}}' />
+        <input class='ip2' name="xl"  placeholder="请输入多少kg" value="{{xl}}">
+          </input>
       </view>
     </view>
 
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
-        <view class="weui-label">姓名</view>
+      <view class='text'>请选择日期</view><image class='img2' src='/images/date.png'></image>
       </view>
-      <view class="weui-cell__bd">
-        <input class="weui-input" name="username" placeholder="请输入姓名" value='{{username}}' />
-      </view>
-    </view>
-
-
-
+</view>
+        <picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="pp" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
+        </picker><view class='pp'>到</view>
+        <picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="pp" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
+          {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArra1y[3][dateTime1[3]]}}{{dateTimeArray1[4][dateTime1[4]]}}
+        </picker>
     <view class="weui-cell weui-cell_input">
+    </view>
+<!--   <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
         <view class="weui-label">类型</view>
       </view>
@@ -134,8 +117,7 @@
         <switch checked bindchange='switchChange1' />
       </view>
     </view>
-
-
+-->
 
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
@@ -151,6 +133,6 @@
 
   <view class="btn-area">
 
-    <button type='primary' formType="submit">提交</button>
+    <button type='primary' formType="submit">立即发布</button>
   </view>
 </form>

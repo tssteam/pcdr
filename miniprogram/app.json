@@ -1,12 +1,13 @@
 {
  "pages": [
+    "pages/myinfo/myinfo",
     "pages/splash/splash",
     "pages/home/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
-    "pages/myinfo/myinfo",
+  
     "pages/myinfo1/myinfo1",
     "pages/myinfo2/myinfo1",
     "pages/index/index",

@@ -4,8 +4,8 @@
  <!--页头-->
   <view class="head1">      
       <view class='head2'>
-      <button class='buttonl'  type='{{bcolor}}' bindtap='button'>找车</button>
-       <button  class='buttonl' type='{{bcolor1}}'  bindtap='button1'>找人</button>
+      <button class='buttonl'  type='{{bcolor}}' bindtap='button'>找人</button>
+       <button  class='buttonl' type='{{bcolor1}}'  bindtap='button1'>找车</button>
       </view>  
 </view>
  <view id='ppt'>

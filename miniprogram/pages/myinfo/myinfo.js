@@ -274,6 +274,7 @@ Page({
         time1: e.detail.value.time1,
         zt: "没完成",
         beizhu: e.detail.value.beizhu,
+        xl: e.detail.value.xl,
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
@@ -291,6 +292,7 @@ Page({
           time: e.detail.value.time,
           time1: e.detail.value.time1,
           zt: "没完成",
+          xl: e.detail.value.xl,
           beizhu: e.detail.value.beizhu,
           pc: {pcin:e.detail.value.out, pcout:e.detail.value.incar}
 
