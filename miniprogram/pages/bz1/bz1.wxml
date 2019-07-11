@@ -1,5 +1,4 @@
 <!--pages/bz1/bz1.wxml-->
-<text>pages/bz1/bz1.wxml</text>
 <view class='line'></view>
 <view class='texa'>快速备注</view>
 <view class='tall'>

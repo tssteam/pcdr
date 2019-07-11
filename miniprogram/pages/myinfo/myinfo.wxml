@@ -82,7 +82,7 @@
         <view class="weui-label">人数</view>
       </view>
       <view class="weui-cell__bd">
-        <picker class="weui-input" bindchange="bindPickerChange" name="site" value="{{index}}" range="{{array}}">
+        <picker class="picke" bindchange="bindPickerChange" name="site" value="{{index}}" range="{{array}}">
           {{array[index]}}</picker>
       </view>
     <view class="input1">
@@ -94,16 +94,24 @@
     </view>
 
     <view class="weui-cell weui-cell_input">
-      <view class="weui-cell__hd">
+      <view class="dateline">
       <view class='text'>请选择日期</view><image class='img2' src='/images/date.png'></image>
       </view>
-</view>
-        <picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="pp" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+           <view class='dateline1'>
+     <picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="pp" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
           {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
         </picker><view class='pp'>到</view>
         <picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="pp" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
           {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArra1y[3][dateTime1[3]]}}{{dateTimeArray1[4][dateTime1[4]]}}
         </picker>
+      
+       </view>
+</view>
+
+
+  
+       
+     
     <view class="weui-cell weui-cell_input">
     </view>
 <!--   <view class="weui-cell weui-cell_input">
