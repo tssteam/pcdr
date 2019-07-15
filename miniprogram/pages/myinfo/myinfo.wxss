@@ -4,10 +4,17 @@
  * Licensed under the MIT license
  */
 .img2{
-  height: 50rpx;
-  width: 50rpx;
+  height: 30rpx;
+  width: 30rpx;
   float: left;
   padding-top: 6rpx;
+  padding-left: 30rpx;
+}
+.img3{
+  height: 30rpx;
+  width: 30rpx;
+  float: right;
+  padding-top: 40rpx;
   padding-left: 30rpx;
 }
 .imge{
@@ -20,15 +27,20 @@
   width: 200rpx;
   float: left;
 }
-.pp{
-
+.textt{
+  font-size: 25rpx;
+  float: left;
+  line-height: 100rpx;
+  color: gray;
 }
 .input1{
   margin-left: 70rpx;
   color: gray;
   height: 120rpx;
+  width: 300rpx;
   background-color: gainsboro;
   border-radius:5rpx; 
+  line-height: 110rpx;
 }
 .ip2{
   background-color: gainsboro;
@@ -47,10 +59,32 @@
   width: 100rpx;
   
 }
+.hide{
+  display: none;
+}
+
+.show{
+   height: 800rpx;
+   width: 500rpx;
+  display: block;
+  position: absolute;
+  top: 100rpx;
+  left: 230rpx;
+  background-color: gray;
+}
+.weui-input1{
+  font-size: 20rpx;
+  height: 110rpx;
+}
+.weui-input2{
+  font-size: 20rpx;
+  height: 110rpx;
+}
 .dateline{
-  height: 120rpx;
+  height: 100rpx;
   width: 300rpx;
   float: left;
+  font-size: 30rpx;
   padding-top: 50rpx;
 }
 .dateline1{

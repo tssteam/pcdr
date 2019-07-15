@@ -22,12 +22,19 @@ Page({
     startYear: 2000,
     endYear: 2050,
     array: ['', '1', '2', '3', '4', '5'],
+    index3:1,
     array1: ['0-50$', '50-100$', '100-150$', '150-300$', '300$++'],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
     zt: "没完成",
     pc: { pcin: '起点', pcout: '终点' }
+  },
+  // 区块
+  onChangeShowState: function () {
+    this.setData({
+      showView: (!this.data.showView)
+    })
   },
 
   // 之前男女性别转换按钮函数
@@ -45,6 +52,13 @@ Page({
     } else {
       this.setData({ pcar: '否' });
     }
+  },
+  // 行李数
+  bindPickerChange6(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index3: e.detail.value
+    })
   },
 
   // 日期选择

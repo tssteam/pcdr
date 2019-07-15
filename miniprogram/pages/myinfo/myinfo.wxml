@@ -23,8 +23,8 @@
     <view class="weui-cell weui-cell_input">
 
 
-
     </view>
+
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
         <view class="weui-label">出发地</view>
@@ -36,14 +36,16 @@
     </view>
     <view class="weui-cell weui-cell_input">
     </view>
-
+<view class="{{showView?'show':'hide'}}">
+日期数据页面
+</view>
 
     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
         <view class="weui-label">出发地备注</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" name="outname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value='' />
+        <input class="weui-input2" name="outname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value='' />
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
@@ -69,44 +71,39 @@
         <view class="weui-label">目的地备注</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" name="inname" placeholder="请输入更详细的目的地地信息，如邮编，街道编号" value='' />
+        <input class="weui-input1" name="inname" placeholder="请输入更详细的目的地地信息，如邮编，街道编号"  value='' />
       </view>
     </view>
     <view class="weui-cell weui-cell_input">
     </view>
 
 
-
-    <view class="weui-cell weui-cell_input">
+     <view class="weui-cell weui-cell_input">
       <view class="weui-cell__hd">
         <view class="weui-label">人数</view>
       </view>
       <view class="weui-cell__bd">
         <picker class="picke" bindchange="bindPickerChange" name="site" value="{{index}}" range="{{array}}">
           {{array[index]}}</picker>
-      </view>
+      </view><image   class='imge' src='/images/right.png'></image>
     <view class="input1">
         <view class='xls' >行李数</view>
 
-        <input class='ip2' name="xl"  placeholder="请输入多少kg" value="{{xl}}">
-          </input>
-      </view>
+           <picker class="ip2" bindchange="bindPickerChange6" name="xl" value="{{xl}}" range="{{array}}">
+          {{array[index3]}}</picker>
+      </view><image   class='imge' src='/images/right.png'></image>
     </view>
 
-    <view class="weui-cell weui-cell_input">
-      <view class="dateline">
-      <view class='text'>请选择日期</view><image class='img2' src='/images/date.png'></image>
+ <view class="weui-cell weui-cell_input">
+      <view class="dateline" bindtap='onChangeShowState'>
+      <view class='text'>请选择日期</view><image class='img2' src='/images/ddd.png'></image>
       </view>
            <view class='dateline1'>
-     <picker mode="multiSelector" name="time" value="{{dateTime}}" bindchange="changeDateTime" class="pp" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
-          {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}{{dateTimeArray[4][dateTime[4]]}}
-        </picker><view class='pp'>到</view>
-        <picker mode="multiSelector" name="time1" value="{{dateTime1}}" bindchange="changeDateTime1" class="pp" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray}}">
-          {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArra1y[3][dateTime1[3]]}}{{dateTimeArray1[4][dateTime1[4]]}}
-        </picker>
-      
+    <view class='textt'> 添加日期范围（选填）</view>
+<image class='img3' src='/images/ddd.png'></image>
        </view>
 </view>
+
 
 
   

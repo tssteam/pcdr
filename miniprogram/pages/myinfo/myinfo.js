@@ -20,6 +20,7 @@ Page({
     startYear: 2000,
     endYear: 2050,
     index:1,
+    index3: 1,
     array: ['','1', '2', '3', '4', '5'],
     array1: ['0-50$', '50-100$', '100-150$', '150-300$', '300$++'],
     activeIndex: 0,
@@ -43,8 +44,19 @@ Page({
       index: e.detail.value
     })
   },
-
-
+  // 区块
+  onChangeShowState: function () {
+    this.setData({
+      showView: (!this.data.showView)
+    })
+  },
+  // 行李数
+  bindPickerChange6(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index3: e.detail.value
+    })
+  },
 
   checkboxChange: function (e) {
     if (e.detail.value) {
