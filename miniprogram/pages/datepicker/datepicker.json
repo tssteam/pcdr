@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "van-submit-bar": "/dist/submit-bar/index",
     "date-picker": "/component/date-picker/index"
   }
 }

@@ -1,0 +1,2 @@
+<!--miniprogram/pages/datepicker/datepicker.wxml-->
+<date-picker bindonselectdate="handleSelecteDate" date="{{pickdate}}"  />
