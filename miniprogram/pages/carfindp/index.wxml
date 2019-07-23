@@ -84,34 +84,36 @@
 
 <view class="line"></view>
 
+<view class="listb">
+<view class="name">手机号码</view>
+<input class="input" name="phone" placeholder="000" value='0000'/>
+</view>
 
 
 <view class="list">
 <view class="rs">
-<view class="name2">从:{{dateTime||""}}</view>
+<input class="name5" name='time' value='从:{{dateTime||""}}' />
  <image class='img2' src='/images/ddd.png' bindtap='firstdatetime' id="dateline"></image>
 </view>
 <view class="xls">
-<view class="name3">到:{{dateTime1||""}}</view>
+<input class="name4" name='time1' value='到:{{dateTime1||""}}' />
 <image class='img3' src='/images/ddd.png' bindtap='seconddatetime'></image>
 </view>
 </view>
 <view class="line"></view>
-
 
 <view class="lida"></view>
 
 
 <view class="list">
 <view class="name">备注</view>
-<view class="input" name="beizhu" bindtap='pfc' placeholder="宠物，吸烟，行李" value=''></view>
+<input class="input" name="beizhu" bindtap='pfc' placeholder="宠物，吸烟，行李" value='000'/>
 </view>
 <view class="line"></view>
 
 <button  class="buttonaa" type='primary' formType="submit">立即发布</button>
 </form>
 </view>
-
 
 </scroll-view>
 

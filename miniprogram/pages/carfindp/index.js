@@ -303,11 +303,9 @@ Page({
       data: {
         wxname: e.detail.value.wxname,
         out: e.detail.value.out,
+        phone: e.detail.value.phone,
         incar: e.detail.value.incar,
         username: e.detail.value.username,
-        phone: e.detail.value.phone,
-      
-        cartype: e.detail.value.cartype,
         site: e.detail.value.site,
         price: e.detail.value.price,
         inname: e.detail.value.inname,
@@ -320,13 +318,12 @@ Page({
       },
       success: res => {
         this.setData({
+          wxname: e.detail.value.wxname,
           out: e.detail.value.out,
+          phone: e.detail.value.phone,
           incar: e.detail.value.incar,
           username: e.detail.value.username,
-          phone:e.detail.value.phone,
-
           site: e.detail.value.site,
-          cartype: e.detail.value.cartype,
           price: e.detail.value.price,
           inname: e.detail.value.inname,
           outname: e.detail.value.outname,
@@ -368,9 +365,8 @@ Page({
       data: {
         wxname: e.detail.value.wxname,
         username: e.detail.value.username,
-        phone: e.detail.value.phone,
         yd:"预定",
-      
+        phone: e.detail.value.phone,
         cartype:e.detail.value,
         site: e.detail.value.site,
         out: e.detail.value.out,

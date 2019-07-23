@@ -4,9 +4,9 @@
  * Licensed under the MIT license
  */
 .all{
-  height: auto;
+  height: 1400rpx;
   width: 100%;
-   background-color:  #ffffff;
+  background-color:  #ffffff;
 }
 .list{
   height: 105rpx;
@@ -21,6 +21,9 @@
    width: 100%;
    background-color: #eeeeee;
    height: 2rpx;
+}
+.listb{
+  display: none;
 }
 .name{
    font-size: 36rpx;
@@ -41,6 +44,22 @@
    color: #999999;
    margin-left:40rpx;
    margin-top: 25rpx; 
+   float: left;
+}
+.name4{
+   color: #999999;
+   margin-left:40rpx;
+   margin-top: 23rpx; 
+   font-size: 25rpx;
+   width: 200rpx;
+   float: left;
+}
+.name5{
+   font-size: 25rpx;
+   color: #999999;
+   margin-left:40rpx;
+    margin-top: 23rpx; 
+   width: 200rpx;
    float: left;
 }
 .input{

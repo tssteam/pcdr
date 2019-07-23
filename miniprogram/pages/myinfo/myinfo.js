@@ -7,7 +7,6 @@ Page({
    */
   data: {
     sex: '男',
-    cartype: '拼车',
     city: '',
     city1: '',
     bs: 1,
@@ -309,12 +308,11 @@ Page({
       data: {
         wxname: e.detail.value.wxname,
         out: e.detail.value.out, //出发地
+        phone: e.detail.value.phone,
         incar: e.detail.value.incar, //目的地
         price: e.detail.value.price,
         username: e.detail.value.username,
-        phone: e.detail.value.phone,
         yd: "预定",
-        cartype: e.detail.value.cartype,
         site: e.detail.value.site,
         inname: e.detail.value.inname,
         outname: e.detail.value.outname,
@@ -330,10 +328,9 @@ Page({
           wxname: e.detail.value.wxname,
           out: e.detail.value.out,
           incar: e.detail.value.incar,
-          username: e.detail.value.username,
           phone: e.detail.value.phone,
+          username: e.detail.value.username,
           yd: "预定",
-          cartype: e.detail.value.cartype,
           site: e.detail.value.site,
           inname: e.detail.value.inname,
           outname: e.detail.value.outname,

@@ -23,6 +23,9 @@
    background-color: #eeeeee;
    height: 2rpx;
 }
+.listb{
+  display: none;
+}
 .name{
    font-size: 36rpx;
    color: #999999;
@@ -42,6 +45,22 @@
    color: #999999;
    margin-left:40rpx;
    margin-top: 25rpx; 
+   float: left;
+}
+.name4{
+   color: #999999;
+   margin-left:40rpx;
+   margin-top: 23rpx; 
+   font-size: 25rpx;
+   width: 200rpx;
+   float: left;
+}
+.name5{
+   font-size: 25rpx;
+   color: #999999;
+   margin-left:40rpx;
+    margin-top: 23rpx; 
+   width: 200rpx;
    float: left;
 }
 .input{
