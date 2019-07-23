@@ -8,12 +8,16 @@ Page({
   data: {
     sex: '男',
     city: '',
+    ll:1,
     city1: '',
+    list:"list",
+    pickdate: null,
     bs: 1,
     date: '2018-10-01',
     time: '12:00',
     dateTimeArray: null,
     dateTime: null,
+    datat:"datatimeno",
     dateTimeArray1: null,
     dateTime1: null,
     startYear: 2000,
@@ -50,18 +54,61 @@ Page({
       index: e.detail.value
     })
   },
+
+  onShareAppMessage: function () {
+
+  },
+
+  //日期选择的回调函数
+  //author:yewei_andy
+  handleSelecteDate: function (e) {
+    let pickdate = e.detail.date
+    console.log(`选择的日期:${pickdate}`)
+    //author:yewei_andy
+    //把数据携带给上一个页面
+    //获取栈中所有页面
+    let pages = getCurrentPages()
+    //获取上一页
+    let prevPage = pages[pages.length - 2];
+    this.setData({
+      pickdate: pickdate,
+    })
+    if (this.data.ll == 1) {
+      // 将我们想要传递的参数在这里直接setData。上个页面就会执行这里的操作。
+      this.setData({
+        dateTime: pickdate,
+        datat: "datatimeno",
+        list:"list"
+      })
+    } else if (this.data.ll == 2) {
+      // 将我们想要传递的参数在这里直接setData。上个页面就会执行这里的操作。
+      this.setData({
+        dateTime1: pickdate,
+        datat: "datatimeno",
+        list: "list"
+      })
+    }
+  
+  },
+
   // 第一个时间
   firstdatetime: function(e) {
-    wx.navigateTo({
-      url: `../datepicker/datepicker?dataoption=1`
+    this.setData({
+      ll:1,
+      datat: "datatime",
+      list:"datatimeno",
     })
+  
   },
 
   //第二个时间
   seconddatetime: function(e) {
-    wx.navigateTo({
-      url: `../datepicker/datepicker?dataoption=2`
+    this.setData({
+      ll: 2,
+      datat: "datatime",
+      list:'datatimeno'
     })
+
   },
 
 

@@ -6,62 +6,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pcar:"是",
-    cartype:'拼车',
+    sex: '男',
     city: '',
-    sex:"男",
+    ll: 1,
     city1: '',
+    list: "list",
+    pickdate: null,
     bs: 1,
-    index:1,
     date: '2018-10-01',
     time: '12:00',
     dateTimeArray: null,
     dateTime: null,
+    datat: "datatimeno",
     dateTimeArray1: null,
     dateTime1: null,
     startYear: 2000,
     endYear: 2050,
+    index: 1,
+    index3: 1,
     array: ['', '1', '2', '3', '4', '5'],
-    index3:1,
     array1: ['0-50$', '50-100$', '100-150$', '150-300$', '300$++'],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
     zt: "没完成",
-    pc: { pcin: '起点', pcout: '终点' }
+    yd: "预定",
+    pc: {
+      pcin: '起点',
+      pcout: '终点'
+    }
   },
-  // 区块
-  onChangeShowState: function () {
-    this.setData({
-      showView: (!this.data.showView)
-    })
-  },
-
-  // 之前男女性别转换按钮函数
   switchChange: function (e) {
     if (e.detail.value) {
-      this.setData({ sex: '男' });
+      this.setData({
+        sex: '男'
+      });
     } else {
-      this.setData({ sex: '女' });
+      this.setData({
+        sex: '女'
+      });
     }
-  },
-// 沿途拼车按钮
-  switchChange2: function (e) {
-    if (e.detail.value) {
-      this.setData({ pcar: '是' });
-    } else {
-      this.setData({ pcar: '否' });
-    }
-  },
-  // 行李数
-  bindPickerChange6(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index3: e.detail.value
-    })
   },
 
-  // 日期选择
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -69,57 +55,61 @@ Page({
     })
   },
 
-  cfp: function () {
-    wx.navigateTo({
-      url: '../bz1/bz1',
+  onShareAppMessage: function () {
 
-    })
-  },
-// 之前说要做选择框的男女选择函数
-  checkboxChange: function (e) {
-    if (e.detail.value) {
-      this.setData({ sex: '男' });
-    } else {
-      this.setData({ sex: '女' });
-    }
   },
 
-
-
-
-
-// 小程序页面加载读取
-  onLoad() {
-    // 获取完整的年月日 时分秒，以及默认显示的数组
-    wx.setNavigationBarTitle({ title: '车找人' })
-    var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
-    var obj1 = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
-    // 精确到分的处理，将数组的秒去掉
+  //日期选择的回调函数
+  //author:yewei_andy
+  handleSelecteDate: function (e) {
+    let pickdate = e.detail.date
+    console.log(`选择的日期:${pickdate}`)
+    //author:yewei_andy
+    //把数据携带给上一个页面
+    //获取栈中所有页面
+    let pages = getCurrentPages()
+    //获取上一页
+    let prevPage = pages[pages.length - 2];
     this.setData({
-      dateTime: obj.dateTime,
-	  dateTimeArray: obj.dateTimeArray,
-      dateTimeArray1: obj.dateTimeArray,
-      dateTime1: obj.dateTime
-	});
-
-  // 本地内存拿出来，之前addfunction的储存对象，包括微信的名字，城市，电话，用户名
-	var that = this 
-    wx.getStorage({
-      key: 'mysec1',
-      success: function (res) {
-        console.log(res)
-        that.setData({
-          wxname: res.data.wx2,
-          city: res.data.c2,
-          phone: res.data.ph2,
-          username: res.data.n2,
-        })
-      },
-
-
+      pickdate: pickdate,
     })
+    if (this.data.ll == 1) {
+      // 将我们想要传递的参数在这里直接setData。上个页面就会执行这里的操作。
+      this.setData({
+        dateTime: pickdate,
+        datat: "datatimeno",
+        list: "list"
+      })
+    } else if (this.data.ll == 2) {
+      // 将我们想要传递的参数在这里直接setData。上个页面就会执行这里的操作。
+      this.setData({
+        dateTime1: pickdate,
+        datat: "datatimeno",
+        list: "list"
+      })
+    }
+
   },
 
+  // 第一个时间
+  firstdatetime: function (e) {
+    this.setData({
+      ll: 1,
+      datat: "datatime",
+      list: "datatimeno",
+    })
+
+  },
+
+  //第二个时间
+  seconddatetime: function (e) {
+    this.setData({
+      ll: 2,
+      datat: "datatime",
+      list: 'datatimeno'
+    })
+
+  },
   // 都是日期的函数
   changeDate(e) {
     this.setData({ date: e.detail.value });

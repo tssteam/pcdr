@@ -10,6 +10,11 @@
 <view class="line"></view>
 <view></view>
 
+
+<view class='{{datat}}'>
+<date-picker bindonselectdate="handleSelecteDate" date="{{pickdate}}" />
+</view>
+
 <view class="list">
 <view class="name">微信号</view>
 <input class="input" name="wxname" placeholder="请输入微信号" value='{{wxname}}' />
@@ -27,7 +32,7 @@
 <view class="line"></view>
 
 
-<view class="list">
+<view class="{{list}}">
 <view class="name">出发地备注</view>
 <input class="input" name="outname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value=''/>
 </view>
@@ -35,7 +40,7 @@
 <view></view>
 
 
-<view class="list">
+<view class="{{list}}">
 <view class="cfd">
 <view class="name">目的地</view>
 <input class="input6" name="incar" placeholder="请选择目的地" value='{{city1}}' />
@@ -44,7 +49,7 @@
 </view>
 <view class="line"></view>
 
-<view class="list">
+<view class="{{list}}">
 <view class="name">目的地备注</view>
 <input class="input" name="inname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value=''/>
 </view>
@@ -59,7 +64,7 @@
 <view></view>
 
 
-<view class="list">
+<view class="{{list}}">
 <view class="cfd">
 <view class="name">沿途拼车</view>
 <input class="input7"  name="pcar" value='{{pcar}}' />
