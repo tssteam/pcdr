@@ -24,7 +24,7 @@
 <view class="list">
 <view class="cfd">
 <view class="name">出发地</view>
-<input class="input5" type="text" value='{{city}}' name="out" placeholder="请选择出发地" />
+<input class="input5" type="text"  disabled ='true' value='{{city}}' name="out" placeholder="请选择出发地" />
 </view>
 <image bindtap='city' class='imge' src='/images/right.png'></image>
 </view>
@@ -47,7 +47,7 @@
 <view class="{{list}}">
 <view class="cfd">
 <view class="name">目的地</view>
-<input class="input6" name="incar" placeholder="请选择目的地" value='{{city1}}' />
+<input class="input6"  disabled ='true' name="incar" placeholder="请选择目的地" value='{{city1}}' />
 </view>
 <image bindtap='city1' class='imge' src='/images/right.png'></image>
 </view>
@@ -55,7 +55,7 @@
 
 <view class="{{list}}">
 <view class="name">目的地备注</view>
-<input class="input" name="inname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value=''/>
+<input class="input"  name="inname" placeholder="请输入更详细的出发地信息，如邮编，街道编号" value=''/>
 </view>
 <view class="line"></view>
 <view></view>
@@ -80,11 +80,11 @@
 
 <view class="list">
 <view class="rs">
-<input class="name5" name='time' value='从:{{dateTime||""}}' />
+<input class="name5" disabled ="true"  name='time' value='从:{{dateTime||""}}' />
  <image class='img2' src='/images/ddd.png' bindtap='firstdatetime' id="dateline"></image>
 </view>
 <view class="xls">
-<input class="name4" name='time1' value='到:{{dateTime1||""}}' />
+<input class="name4" disabled ='true' name='time1' value='到:{{dateTime1||""}}' />
 <image class='img3' src='/images/ddd.png' bindtap='seconddatetime'></image>
 </view>
 </view>
@@ -94,9 +94,9 @@
 <view class="lida"></view>
 
 
-<view class="list">
+<view class="{{list}}">
 <view class="name">备注</view>
-<input class="input" name="beizhu" bindtap='pfc' placeholder="宠物，吸烟，行李" value='000'/>
+<input class="input"  disabled ='true' name="beizhu" bindtap='pfc' placeholder="宠物，吸烟，行李" value='000'/>
 </view>
 <view class="line"></view>
 

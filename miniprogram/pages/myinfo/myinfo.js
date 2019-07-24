@@ -31,6 +31,7 @@ Page({
     sliderLeft: 0,
     zt: "没完成",
     yd: "预定",
+    lock:true,
     pc: {
       pcin: '起点',
       pcout: '终点'
@@ -78,14 +79,16 @@ Page({
       this.setData({
         dateTime: pickdate,
         datat: "datatimeno",
-        list:"list"
+        list:"list",
+        lock: false
       })
     } else if (this.data.ll == 2) {
       // 将我们想要传递的参数在这里直接setData。上个页面就会执行这里的操作。
       this.setData({
         dateTime1: pickdate,
         datat: "datatimeno",
-        list: "list"
+        list: "list",
+        lock:false,
       })
     }
   
