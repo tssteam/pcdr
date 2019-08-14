@@ -1,5 +1,4 @@
-  
-  <view class='tophead'>
+   <view class='tophead'>
   <image src="/images/date.png" bindtap="show" class="dateImg"></image>
 <text>拼车达人与你同行</text>
 

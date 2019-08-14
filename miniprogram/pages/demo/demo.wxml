@@ -1,4 +1,0 @@
-<view class='wrapper'> 
-<!--地图加载页面，demo1-5都是地图数据收集，分别分发储存内容到不同的页面，达到不同的储存效果-->
-<list-html data="{{city}}" my-city="newyork" binddetail="bindtap" config="{{config}}"></list-html>
-</view> 

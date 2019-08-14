@@ -2,7 +2,11 @@
 .inline {
   display: inline;
 }
-
+.all{
+  background-color: #f1f1f1;
+  height: 1310rpx;
+  width: 100%;
+}
 .time-pad {
   padding-top: 9px;
 }
@@ -104,8 +108,8 @@ margin:2rpx 10rpx;
     height: 100%;
 }
 #ppt{
+  height: 450rpx;
   width: 100%;
-  padding-left: 40px;
 }
 .page__bd{
     padding-bottom: 0;
@@ -139,5 +143,7 @@ margin:2rpx 10rpx;
   color:white
 }
 .image1{
-  padding-left: 20rpx;
+  height: 450rpx;
+  width: 100%;
+  margin-left: 18rpx;
 }

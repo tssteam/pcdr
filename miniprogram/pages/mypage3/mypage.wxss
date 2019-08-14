@@ -1,161 +1,233 @@
-.img{
-    border-radius: 50%;
-    height: 100rpx;
-    width: 100rpx;
-}
-.txt{
-    margin: 10rpx 10rps 10rpx 10rpx;
-    font-family: "微软雅黑";
-    font-size: 50rpx;
-    height: 50rpx;
-}
-.tophead{
-  color:white;
-  height: 121rpx;
+.head{
+  height: 80rpx;
   width: 100%;
-  background-color: blue;
-  color: white;
+  background-color: whitesmoke;
 }
-.tophead button{
-  height: 120rpx;
-  width: 120rpx;
+.head1{
   float: left;
-  font-size: 20rpx;
-}
-.tophead image{
-  height: 120rpx;
-  width: 120rpx;
-  float: left;
-  font-size: 20rpx;
-}
-
-
-
-
-
-.zhezao{
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0px;
-  background:rgba(0,0,0,0.4);
-  overflow: hidden;
-  }
-.t_w{
-  position:relative;
-  }
-.tanchu_view{
-  width: 80%;
-  margin:25% auto;
-  overflow: hidden;
-  background-color: #fff1e6;
-  border-radius: 10rpx;
-  padding: 4rpx;
-  }
- 
- 
-.bg_view{
-  margin:30rpx auto 30rpx auto;
-  color:#fcb712;
-  font-size:50rpx;
-  background-color: #fff1e6;
-  padding:0rpx 30rpx;
-  text-align: center;
-  } 
- 
- 
-  .txtys{
-    font-size: 20rpx;
-    text-align: center;
-    margin-bottom: 200rpx;
-  }
- 
-.txtsure{
- width: 100%;
- height: 100%;
- display: flex;
- justify-content: center;
- margin: 20rpx;
-}
- 
-/*确定背景*/
-.txtsurebg{
-  width: 300rpx;
-  height: 100rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4rpx;
-  margin: 60rpx;
-  background-color: burlywood;
-   flex-direction: column;
-}
- 
-/*确定图标*/
-.txtsureimg{
-  display:block;
-  width:120rpx;
-  height:120rpx;
-}
- 
-/*确定文本*/
-.txtsurename{
-   margin-bottom: 0rpx;
-   color: white;
-   font-size: 30rpx;
-}
- 
-/*右上角图标*/
-.t_image{
-  width:204rpx;
-  height:200rpx;
-  position: absolute;
-  top: -6%;
-  left:88%;
-  }
- 
-/*右上角图标*/
-.t_image1{
-  display:block;
-  width:60rpx;
-  height:60rpx;
-  }
-
-
-
-
-
-
-
-
-
-  .sliderHCon {
-  margin: 0 40rpx 0 40rpx;
-  height: 250rpx;
-  border: 1rpx solid red;
-  width: 70%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.MoneyValue {
+  color: rgb(102, 102, 102);
+  padding-left: 30rpx;
   font-size: 30rpx;
-  text-align: center;
-  color: #999;
-  margin-top: 15rpx;
+  margin-top: 10rpx;
+  width: 90rpx;
 }
 
-.showMoney text {
+.line{
+  height: 5rpx;
+  width: 60rpx;
+  border-radius:2rpx; 
+ margin: auto;
+  background-color: rgb(25, 209,198);
+  margin-top: 12rpx;
+}
+.line1{
+  height: 0prx;
+  width: 0rpx;
+}
+.head2{
+   float: left;
+  color: rgb(102, 102, 102);
+  margin-top: 10rpx;
+  padding-left: 60rpx;
+  font-size: 30rpx;
+    width: 90rpx;
+}
+.head3{
+    float: left;
+   color: rgb(102, 102, 102);
+    margin-top: 10rpx;
+  padding-left: 70rpx;
+  font-size: 30rpx;
+     width: 90rpx;
+}
+.head4{
+   float: left;
+  color: rgb(102, 102, 102);
+   padding-left: 60rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+     width: 90rpx;
+}
+.head5{
+   float: left;
+  color: rgb(102, 102, 102);
+   padding-left: 60rpx;
+  font-size: 30rpx;
+    width: 90rpx;
+    margin-top: 10rpx;
+}
+.head6{
+  float: left;
+  color: rgb(102, 102, 102);
+  padding-left: 60rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  width: 90rpx;
+}
+.head11{
+  float: left;
+  color: rgb(25, 209,198);
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  width: 90rpx;
+}
+
+.a{
+  height: 3rpx;
+  width: 100%;
+  z-index: 30;
+  background-color: #cccccc;
+}
+.head22{
+   float: left;
+   color: rgb(25, 209,198);
+  margin-top: 10rpx;
+  padding-left: 60rpx;
+  font-size: 30rpx;
+    width: 90rpx;
+}
+.head33{
+    float: left;
+    color: rgb(25, 209,198);
+    margin-top: 10rpx;
+  padding-left: 60rpx;
+  font-size: 30rpx;
+     width: 90rpx;
+}
+.head44{
+   float: left;
+    color: rgb(25, 209,198);
+  padding-left: 60rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+     width: 90rpx;
+}
+.head55{
+   float: left;
+  color: rgb(25, 209,198);
+  padding-left: 60rpx;
+  font-size: 30rpx;
+    width: 90rpx;
+    margin-top: 10rpx;
+}
+.head66{
+  float: left;
+  color: rgb(25, 209,198);
+  padding-left: 60rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  width: 90rpx;
+}
+
+.body{
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.bodylist{
+  height: 500rpx;
+  width: 98%;
+  background-color: white;
+  padding-left: 1%;
+}
+.bodyhead{
+  height: 80rpx;
+  width: 98%;
+  margin-top: 30rpx;
+}
+.bodyimg{
+  height: 44rpx;
+  width: 44rpx;
+  border-radius:40rpx; 
+  float: left;
+  margin-left: 30rpx;
+  background-color:tan;
+}
+.bodyname{
+  float: left;
+  font-size: 30rpx;
+  color: rgb(51, 51, 51);
+}
+.imgright{
+  height: 37rpx;
+  width: 22rpx;
+  border-radius:40rpx;
+  margin-left: 20rpx;
+  margin-top: 1rpx; 
+  float: left;
+}
+.zt{
+  margin-left:600rpx; 
+  color: rgb(25, 209,198);
+  font-size: 30rpx;
+}
+
+
+.bodybody{
+  height: 300rpx;
+  width: 98%;
+  margin-left: 1%;
+}
+.bodyleftimg{
+  height: 200rpx;
+  width: 250rpx;
+  margin-top: 20rpx;
+  float: left;
+   background-color:tan;
+}
+.textclass{
+  height: 200rpx;
+  overflow: hidden;
+  width: 310rpx;
+  padding-left: 10rpx;
+  float: left;
+  font-size: 30rpx;
+}
+.textright{
+  height: 300rpx;
+  width: 150rpx;
+  float: left;
+  text-align: right;
+}
+.bodyse{
+  height: 50rpx;
+  width: 100%;
+  font-size: 30rpx;
+}
+.bodyset{
+  float: right;
   margin-right: 30rpx;
 }
-
-.twoSlider {
+.bodybottom{
+  height: 50rpx;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+
+}
+.imglll{
+  height: 20rpx;
+  width: 100rpx;
+}
+.bodybottomb{
+  float: right;
+}
+.imgs{
+  height: 50rpx;
+  width: 160rpx;
+  padding-right:35rpx; 
+  float: left;
+}
+.imgsq{
+  height: 50rpx;
+  width: 160rpx;
+  float: left;
+}
+.bodyb2{
+  height: 300rpx;
+  width: 100%;
+}
+
+.bodypp{
+  display: none;
 }

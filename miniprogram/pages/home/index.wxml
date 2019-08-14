@@ -1,15 +1,16 @@
- <form bindsubmit="formSubmit">
+<view class='all'>
+<form bindsubmit="formSubmit">
  <!--主页面每一个view对应每一个板块，包括样式设计都是我调整计算出来的-->
 <view class="page" >
  <!--页头-->
+  <view id='ppt'>
+ <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
   <view class="head1">      
       <view class='head2'>
       <button class='buttonl'  type='{{bcolor}}' bindtap='button'>找人</button>
        <button  class='buttonl' type='{{bcolor1}}'  bindtap='button1'>找车</button>
       </view>  
 </view>
- <view id='ppt'>
- <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
 
 
  <view class="page__hd">
@@ -36,19 +37,6 @@
 
 <view class='time'>
       <view class='picker'>
-        <image src="/images/date.png" class="dateImg"></image>
-        <view>
-          <picker mode="multiSelector" name="endtime" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="" range="{{dateTimeArray}}">
-        直至: {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}}
-    </picker>
-        </view>
-      </view> 
-</view>
-
-
-
-<view class='time'>
-      <view class='picker'>
       <image src="/images/Tourist.png" class="dateImg"></image>
          <picker bindchange="bindPickerChange" name="people" value="{{index}}" range="{{array}}">
     <view class="picker">
@@ -69,9 +57,10 @@
 </view>
 
 
-
 <view class="page__bd">
        <button  class='search'  formType="submit">搜索</button>
 </view>
 </view>
 </form>
+</view>
+ 

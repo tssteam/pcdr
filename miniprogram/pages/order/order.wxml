@@ -1,18 +1,17 @@
+<view class='container'>
 
-<view>
- <view id='ppt'>
- <image class='image1' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg'></image></view>
-<view id='view1'>
-<button id='button1' bindtap='pfindcar'>
+<view class='view'>
+<image class='imgc' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/pcar.jpg'></image>
+<view class='button1' bindtap='pfindcar'>
 人找车
-</button>
-
+</view>
 
 </view>
-<view id='view2'>
-<button id='button2' bindtap='carfindp'>
+<view class='view'>
+<image class='imgc' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/car.jpg'></image>
+<view class='button2' bindtap='carfindp'>
 车找人
-</button>
+</view>
 
 <text></text>
 </view>

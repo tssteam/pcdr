@@ -1,126 +1,408 @@
-// 利用加载刷选过后的司机的订单信息逻辑页面
+// 利用加载刷选过后的乘客的订单信息逻辑页面
 const db = wx.cloud.database({});
-const carfindp = db.collection('carfindp');
+const user = db.collection('user');
+var dateTimePicker = require('../../utils/dateTimePicker.js');
 Page({
   data: {
-    show: false,
-    // 注释掉无用的数据
-    leftMin: 0, //左边滑块最小值
-    leftMax: 1200, //左边滑块最大值
-    rightMin: 1300, //右边滑块的最小值
-    rightMax: 2400, //右边滑块最大值
-    leftValue: 1000, //左边滑块默认值
-    rightValue: 1500, //右边滑块默认值
-    leftWidth: '50', //左边滑块可滑动长度：百分比
-    rightWidth: '50', //右边滑块可滑动长度：百分比
+    h1: "head11",
+    h2: "head2",
+    h3: "head3",
+    h4: "head4",
+    h5: "head5",
+    h6: "head6",
+    l1: "line",
+    l2: "line1",
+    l3: "line1",
+    l4: "line1",
+    l5: "line1",
+    l6: "line1",
+    all: [],
+    all1: [],
+    all2: [],
+    all3: [],
+    all4: [],
+    all5: [],
 
-    leftMin1: 0, //左边滑块最小值
-    leftMax1: 1200, //左边滑块最大值
-    rightMin1: 1300, //右边滑块的最小值
-    rightMax1: 2400, //右边滑块最大值
-    leftValue1: 1000, //左边滑块默认值
-    rightValue1: 1500, //右边滑块默认值
-    leftWidth1: '50', //左边滑块可滑动长度：百分比
-    rightWidth1: '50', //右边滑块可滑动长度：百分比
+    ppp: "body",
+    ppp1: "bodypp",
+    ppp2: "bodypp",
+    ppp3: "bodypp",
+    ppp4: "bodypp",
+    ppp5: "bodypp",
+    url: "{{api}}}}",
     outp: "起点",
     inp: "终点",
-    order_list1: [],
+    order_list: [],
     avatarUrl: "cloud://anglfs-5f307e.616e-anglfs-5f307e/logo.jpg"
   },
 
-  onPullDownRefresh() {
-    wx.stopPullDownRefresh()
+
+
+
+  onLoad: function (options) {
+    var that = this;
+    var that = this;
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+        status:"状态"
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
   },
 
-  onLoad() {
+
+  b1: function () {
+    var that = this;
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
+    this.setData({
+      h1: "head11",
+      h2: "head2",
+      h3: "head3",
+      h4: "head4",
+      h5: "head5",
+      h6: "head6",
+
+      l1: "line",
+      l2: "line1",
+      l3: "line1",
+      l4: "line1",
+      l5: "line1",
+      l6: "line1",
+
+      ppp: "body",
+      ppp1: "bodypp",
+      ppp2: "bodypp",
+      ppp3: "bodypp",
+      ppp4: "bodypp",
+      ppp5: "bodypp",
+    })
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    })
+    wx.showToast({
+      title: '加载完成',
+      icon: 'loading'
+    })
+  },
+  b2: function () {
+    var that = this;
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
+    this.setData({
+      h1: "head1",
+      h2: "head22",
+      h3: "head3",
+      h4: "head4",
+      h5: "head5",
+      h6: "head6",
+
+      l1: "line1",
+      l2: "line",
+      l3: "line1",
+      l4: "line1",
+      l5: "line1",
+      l6: "line1",
+
+      ppp: "bodypp",
+      ppp1: "body",
+      ppp2: "bodypp",
+      ppp3: "bodypp",
+      ppp4: "bodypp",
+      ppp5: "bodypp",
+
+    })
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    })
+    wx.showToast({
+      title: '加载完成',
+      icon: 'loading'
+    })
+  }
+  ,
+  b3: function () {
+    var that = this;
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
+    this.setData({
+      h1: "head1",
+      h2: "head2",
+      h3: "head33",
+      h4: "head4",
+      h5: "head5",
+      h6: "head6",
+
+      l1: "line1",
+      l2: "line1",
+      l3: "line",
+      l4: "line1",
+      l5: "line1",
+      l6: "line1",
+
+      ppp: "bodypp",
+      ppp1: "bodypp",
+      ppp2: "body",
+      ppp3: "bodypp",
+      ppp4: "bodypp",
+      ppp5: "bodypp",
+
+    })
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    })
+    wx.showToast({
+      title: '加载完成',
+      icon: 'loading'
+    })
+  }
+  ,
+  b4: function () {
+    var that = this;
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
+    this.setData({
+      h1: "head1",
+      h2: "head2",
+      h3: "head3",
+      h4: "head44",
+      h5: "head5",
+      h6: "head6",
+
+      l1: "line1",
+      l2: "line1",
+      l3: "line1",
+      l4: "line",
+      l5: "line1",
+      l6: "line1",
+
+      ppp: "bodypp",
+      ppp1: "bodypp",
+      ppp2: "bodypp",
+      ppp3: "body",
+      ppp4: "bodypp",
+      ppp5: "bodypp",
+
+    })
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    })
+    wx.showToast({
+      title: '加载完成',
+      icon: 'loading'
+    })
+  }
+  ,
+  b5: function () {
+    var that = this;
+
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
+    this.setData({
+      h1: "head1",
+      h2: "head2",
+      h3: "head3",
+      h4: "head4",
+      h5: "head55",
+      h6: "head6",
+
+      l1: "line1",
+      l2: "line1",
+      l3: "line1",
+      l4: "line1",
+      l5: "line",
+      l6: "line1",
+
+      ppp: "bodypp",
+      ppp1: "bodypp",
+      ppp2: "bodypp",
+      ppp3: "bodypp",
+      ppp4: "body",
+      ppp5: "bodypp",
+
+    })
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    })
+    wx.showToast({
+      title: '加载完成',
+      icon: 'loading'
+    })
+  }
+  ,
+  b6: function () {
+    var that = this;
+    wx.request({
+      method: "post",
+      url: '{{api}}}',
+      data: {
+        pageNo: "1",
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+      },
+      success(res) {
+        that.setData({
+          all5: res.data.data
+        })
+        console.log(res.data.data)
+      }
+    })
+    this.setData({
+      h1: "head1",
+      h2: "head2",
+      h3: "head3",
+      h4: "head4",
+      h5: "head5",
+      h6: "head66",
+
+      l1: "line1",
+      l2: "line1",
+      l3: "line1",
+      l4: "line1",
+      l5: "line1",
+      l6: "line",
+
+      ppp: "bodypp",
+      ppp1: "bodypp",
+      ppp2: "bodypp",
+      ppp3: "bodypp",
+      ppp4: "bodypp",
+      ppp5: "body",
+
+    })
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading'
+    })
+    wx.showToast({
+      title: '加载完成',
+      icon: 'loading'
+    })
+  }
+  ,
+
+
+  // 从home传过来的储存出发点和到达点使用，例如从xxx到xxx
+  onShow: function (options) {
+    wx.setNavigationBarTitle({ title: '拼车达人（美国版）' })
     var that = this;
     wx.getStorage({
       key: 'mysec',
-      success: function(res) {
+      success: function (res) {
+        wx.setNavigationBarTitle({
+          title: res.data.s1 + "到" + res.data.e1
+        })
         that.setData({
           outp: res.data.s1,
           inp: res.data.e1,
         })
-        db.collection('carfindp').where({
-            out: res.data.s1,
-            incar: res.data.e1,
-            // site: res.data.pep1,
-            time: res.data.st1,
-            time1: res.data.ed1,
-          }
+        console.log('存储的数据')
+        console.log(res.data)
+        db.collection('user').where({
+          out: res.data.s1,
+          incar: res.data.e1,
+          // site: res.data.pep1, //座位
+          time: res.data.st1,
+          time1: res.data.ed1,
+        }
         ).get({
           success: res => {
             console.log(res.data)
             that.setData({
-              order_list1: res.data,
+              order_list: res.data,
             })
           }
         })
       },
     })
-  },
+  }
 
-  // 遮罩层显示
-  show: function() {
-    this.setData({
-      flag: false
-    })
-    wx.navigateTo({
-      url: '../cal/index',
-    })
-  },
-  // 遮罩层隐藏
-  conceal: function() {
-    this.setData({
-      flag: true
-    })
-  },
-
-
-  // 左边滑块滑动的值
-  leftChange: function(e) {
-    console.log('左边改变的值为：' + e.detail.value);
-    var that = this;
-    that.setData({
-      leftValue: e.detail.value //设置左边当前值
-    })
-  },
-  // 右边滑块滑动的值
-  rightChange: function(e) {
-    console.log('右边改变的值为：' + e.detail.value);
-    var that = this;
-    that.setData({
-      rightValue: e.detail.value,
-    })
-  },
-
-  // 左边滑块滑动的值
-  leftChange1: function(e) {
-    console.log('左边改变的值为：' + e.detail.value);
-    var that = this;
-    that.setData({
-      leftValue1: e.detail.value //设置左边当前值
-    })
-  },
-  // 右边滑块滑动的值
-  rightChange1: function(e) {
-    console.log('右边改变的值为：' + e.detail.value);
-    var that = this;
-    that.setData({
-      rightValue1: e.detail.value,
-    })
-  },
-
-
-
-
-
-
-
-
-  onShow: function(options) {
-    wx.setNavigationBarTitle({
-      title: '拼车达人(美国版)'
-    })
-  },
 })
+

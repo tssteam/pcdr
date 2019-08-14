@@ -1,0 +1,21 @@
+<!--pages/ordercar/ordercar.wxml-->
+<view wx:for="{{order_list2}}" wx:key="ID" >
+ <navigator url='../item1/item?id={{item._id}}'>
+  <van-card
+  num="{{item.zt}}"
+  tag="空座：{{item.Seats}}"
+  price="{{item.price}}"
+  desc="司机：{{item.username}}"
+  title="{{item.LocationStart}}——>{{item.LocationEnd}}"
+  thumb="{{avatarUrl}}"
+>
+<view slot="tags">
+    <van-tag plain type="success">出发日期:20{{item.DateStart}}至20{{item.DateEnd}}</van-tag>
+   
+  </view>
+   <view slot="tags">  <van-tag plain type="primary">hash:{{item._id}}</van-tag></view>
+  <view slot="tags">  <van-tag plain type="primary">备注:{{item.beizhu}}</van-tag></view>
+ 
+</van-card>
+   </navigator>
+</view>

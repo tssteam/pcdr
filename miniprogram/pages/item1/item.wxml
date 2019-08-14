@@ -1,4 +1,3 @@
-
 <view class='container' wx:for="{{list}}" style='display:block;'>
   <view class='item'>
     <view class='left'>名字</view>

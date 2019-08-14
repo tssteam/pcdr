@@ -77,26 +77,7 @@ Page({
   //只要是第一次读取时间日期用的
   onLoad() {
 
-    //主页中获取用户信息
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              console.log(res.userInfo),
-                this.setData({
-                  avatarUrl: res.userInfo.avatarUrl,
-                  userInfo: res.userInfo,
-                  name: res.userInfo.nickName
-                })
-            }
-          })
-        }
 
-      }
-    })
 
     // 获取完整的年月日 时分秒，以及默认显示的数组
     var obj = dateTimePicker.dateTimePicker(this.data.startYear, this.data.endYear);
@@ -217,56 +198,7 @@ Page({
     })
   },
 
-  //暂时没有用到，之前是用来位置定位的
-  getmap: function(e) {
-    var QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js')
-    var qqmapsdk
-
-    var that = this
-    // 实例化腾讯地图API核心类
-    qqmapsdk = new QQMapWX({
-      key: 'VL6BZ-EJNKQ-FDL5T-GXDX7-VS7GJ-L5BG4' // 必填
-    });
-    //1、获取当前位置坐标
-    wx.getLocation({
-      type: 'wgs84',
-      success: function(res) {
-        //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
-        qqmapsdk.reverseGeocoder({
-          location: {
-            latitude: res.latitude,
-            longitude: res.longitude
-          },
-          success: function(res) {
-            var address = res.result.address;
-            console.log(address)
-            that.setData({
-              start: address
-            })
-          },
-          fail: function(error) {
-            console.error(error);
-          }
-        })
-      }
-    })
-
-  },
-
-  //没用到
-  switchChange: function(e) {
-    if (e.detail.value) {
-      this.setData({
-        cartype: '车找人'
-      });
-
-    } else {
-      this.setData({
-        cartype: '人找车'
-      });
-
-    }
-  },
+ 
 
   //改变上面车找人人找车按钮样式，然后判断选择的状态，yes等于多少就是跳转的选择状态多少
   button: function(e) {

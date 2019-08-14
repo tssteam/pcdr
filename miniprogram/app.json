@@ -3,44 +3,34 @@
     "pages/splash/splash",
     "pages/home/index",
     "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/myinfo/myinfo",
-    "pages/myinfo1/myinfo1",
-    "pages/myinfo2/myinfo1",
+    "pages/Personalinformation/Personalinformation",
+    "pages/pfindcar/pfindcar",
+    "pages/orderp/orderp",
+    "pages/ordercar/ordercar",
     "pages/index/index",
     "pages/order/order",
-    "pages/pay/pay",
     "pages/mypage/mypage",
     "pages/mypage1/mypage1",
     "pages/mypage2/mypage",
     "pages/mypage3/mypage",
-    "pages/demo/demo",
     "pages/carfindp/index",
     "pages/locationpicker/locationpicker",
-    "pages/demo1/demo1",
-    "pages/demo2/demo2",
-    "pages/demo3/demo3",
-    "pages/demo4/demo3",
-    "pages/demo5/demo3",
     "pages/item/item",
     "pages/item1/item",
     "pages/item2/item",
-    "pages/ite3/item",
-    "pages/ite4/item",
-    "pages/ite5/item",
     "pages/cal/index",
     "pages/userConsole1/userConsole",
-    "pages/bz/bz",
-    "pages/bz1/bz1",
-    "pages/datepicker/datepicker"
+    "pages/beizhup/beizhup",
+    "pages/beizhucar/beizhucar",
+    "pages/datepicker/datepicker",
+    "pages/login/login",
+    "pages/shopMap/shopMap"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "拼车达人（美国版）",
+    "navigationBarTitleText": "拼车达人(US)",
     "navigationBarTextStyle": "black"
   },
   "cloud": true,
@@ -51,27 +41,27 @@
   },
   "tabBar": {
     "color": "#aaa",
-    "selectedColor": "#ddc40b",
+    "selectedColor": "#1afa29",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/home/index",
         "text": "主页",
-        "iconPath": "images/auto.png",
-        "selectedIconPath": "images/auto1.png"
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
       },
       {
         "pagePath": "pages/order/order",
         "text": "拼车",
-        "iconPath": "images/favorite.png",
-        "selectedIconPath": "images/favorite1.png"
+        "iconPath": "images/car.png",
+        "selectedIconPath": "images/car1.png"
       },
       {
         "pagePath": "pages/index/index",
         "text": "我的",
-        "iconPath": "images/account.png",
-        "selectedIconPath": "images/account1.png"
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
       }
     ]
   },

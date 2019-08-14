@@ -1,3 +1,0 @@
-<view class='wrapper'> 
-<list-html data="{{city}}" my-city="newyork" binddetail="bindtap" config="{{config}}"></list-html>
-</view> 

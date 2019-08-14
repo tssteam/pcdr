@@ -1,0 +1,53 @@
+<!--pages/addFunction/addFunction.wxml-->
+<!--个人信息界面-->
+<form bindsubmit="formSubmit">
+  <view class="all">
+    <view>
+    <image class='imagelogo' src="{{image}}"></image>
+    </view>
+    <view class="list">
+      <view class="listleft">
+        <view class="text">姓名:</view>
+      </view>
+      <view class="listright">
+        <input class="input" name="name" placeholder="请输入姓名" value="{{ userinfoFormData.name }}" />
+      </view>
+    </view>
+    <view class="list">
+      <view class="listleft">
+        <view class="text">手机:</view>
+      </view>
+      <view class="listright">
+        <input class="input" type='number' name="phone" placeholder="请输入手机号码" value="{{ userinfoFormData.number }}" />
+      </view>
+    </view>
+    <view class="list">
+      <view class="listleft">
+        <view class="text">微信号:</view>
+      </view>
+      <view class="listright">
+        <input class="input" name="wxname" placeholder="可以有效避免骚扰电话" value="{{ userinfoFormData.wxname }}" />
+      </view>
+    </view>
+    <view class="list">
+      <view class="listleft">
+        <view class="text">州(省)</view><view class="text">市</view><view class="text">区:</view>
+      </view>
+      <view class="listright">
+       <view class='textp'>{{province}}</view> <view class='textp'>{{city}}</view><view class='textp'>{{district}}</view>
+       <image bindtap='location' class='img' src='cloud://anglfs-5f307e.616e-anglfs-5f307e/potio.png'></image>
+      </view>
+    </view>
+        
+    
+    <view class="list">
+      <view class="listleft">
+        <view class="text">详细地址：</view>
+      </view>
+      <view class="listright">
+        <input class="input" name="address" placeholder="请输入城市" value="{{addr}}" />
+      </view>
+    </view>
+  </view>
+    <button class="button"  formType="submit">保存</button>
+</form>

@@ -1,0 +1,22 @@
+<!--pages/beizhucar/beizhucar.wxml-->
+<view class='line'></view>
+<view class='texa'>快速备注</view>
+<view class='tall'>
+<view class='t1'>包车（价格较拼车高）</view>
+<view class='t2'>儿童桌椅</view>
+<view class='t3'>需要放置轮椅</view>
+<view class='t4'>宠物</view>
+<view class='t5'>航班号</view>
+<view class='t6'></view>
+<view class='t7'></view>
+<view class='t8'></view>
+</view>
+<view class='ll'></view>
+<view>
+<view class='ord'>其他备注</view>
+<view>
+<textarea class='ta' value='请输入其他备注信息'></textarea>
+</view>
+</view>
+<button class='ok'>确定</button>
+

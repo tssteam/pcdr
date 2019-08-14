@@ -1,105 +1,219 @@
-  
-  <view class='tophead' >
-  <image src="/images/date.png" bindtap="show" class="dateImg"></image>
-<text>从{{outp}}到{{inp}}的拼车</text>
- 
+<view class='head'>
+<view class='{{h1}}' bindtap='b1'>
+<view class='tcolor'>星期一</view>
+<view class='{{l1}}'></view>
 </view>
-<view wx:for="{{order_list1}}" >
- <navigator url='../item5/item?id={{item._id}}'>
-  <van-card
-  num="{{item.zt}}"
-  tag="{{item.cartype}}：{{item.site}}"
-  price="{{item.price}}"
-  desc="乘客：{{item.username}}"
-  title="{{item.out}}——>{{item.incar}}"
-  thumb="{{avatarUrl}}"
->
-<view slot="tags">
-    <van-tag plain type="success">出发日期:20{{item.time}}至20{{item.time1}}</van-tag>
-  </view>
-  <view slot="tags">  <van-tag plain type="primary">>{{item.beizhu}}</van-tag></view>
-</van-card>
- </navigator>
+<view class='{{h2}}'  bindtap='b2'>
+
+<view class='tcolor'>星期二</view>
+<view class='{{l2}}'></view>
 </view>
-  
-<view>
-<view class="zhezao" hidden="{{flag}}">
-  <view class="t_w">
- 
-    <!--右上角图标开始-->
-    <view class="t_image"  bindtap="conceal">
-    
-    </view>
-    <!--右上角图标结束-->
- 
-    <!--弹出框开始-->
-    <view class="tanchu_view">
-      <view>
-      
- 
-  <view class="bg_view">
-        </view>
-      
-         <view class="section section_gap">
-  <text class="section__title"> 出发时间</text>
-  <view class="body-view">
-    <view class='sliderHCon'>
-  <view class='showMoney'>
-    <text class='MoneyValue'>{{leftValue/100}}点--</text>
-    <text class='MoneyValue'>{{rightValue/100}}点</text>
-  </view>
-  <view class='twoSlider'>
-    <slider min='{{leftMin}}' max='{{leftMax}}' value='{{leftValue}}' activeColor='#cecacb' backgroundColor='#f26a36' block-size='20' step='100' style='width:{{leftWidth}}%;margin-right:0rpx;' bindchange="leftChange" />
-    <slider min='{{rightMin}}' max='{{rightMax}}' value='{{rightValue}}' activeColor='#f26a36' backgroundColor='#cecacb' block-size='20' step='100' style='width:{{rightWidth}}%;margin-left:0rpx;' bindchange="rightChange" />
-  </view>
+
+
+<view class='{{h4}}'  bindtap='b4'>
+<view class=''>星期三</view>
+<view class='{{l4}}'></view>
 </view>
-  </view>
-</view>  
-
-
-
-
-
-
-<view class="bg_view">
-        </view>
-      
-         <view class="section section_gap">
-  <text class="section__title"> 价格</text>
-  <view class="body-view">
-    <view class='sliderHCon'>
-  <view class='showMoney'>
-    <text class='MoneyValue'>{{leftValue1/10}}$--</text>
-    <text class='MoneyValue'>{{rightValue1/10}}$</text>
-  </view>
-  <view class='twoSlider'>
-    <slider min='{{leftMin1}}' max='{{leftMax1}}' value='{{leftValue1}}' activeColor='#cecacb' backgroundColor='#f26a36' block-size='20' step='100' style='width:{{leftWidth1}}%;margin-right:0rpx;' bindchange="leftChange1" />
-    <slider min='{{rightMin1}}' max='{{rightMax1}}' value='{{rightValue1}}' activeColor='#f26a36' backgroundColor='#cecacb' block-size='20' step='100' style='width:{{rightWidth1}}%;margin-left:0rpx;' bindchange="rightChange1" />
-  </view>
+<view class='{{h5}}'  bindtap='b5'>
+<view class=''>星期四</view>
+<view class='{{l5}}'></view>
 </view>
-  </view>
-</view>        
-
-  
-        <view>
-        <checkbox>商务车</checkbox>
-  <checkbox>残疾人士</checkbox>
-  </view>
-  <view>
-  <checkbox>行李</checkbox>
-  <checkbox>宠物</checkbox>
-        </view>
-
-         <!--确定开始-->
-        <view class="txtsure"  >
-          <view class="txtsurebg" bindtap="conceal">
-              <text class="txtsurename">添加筛选条件</text>
-          </view>        
-        </view>
-         <!--确定结束-->
-       </view>
-    </view>
-    <!--弹出框结束-->
-  </view>
+<view class='{{h6}}'  bindtap='b6'>
+<view class=''>星期五</view>
+<view class='{{l6}}'></view>
 </view>
+</view>
+
+
+<!--全部-->
+<!--bodyhead-->
+<view class='{{ppp}}' wx:for="{{all}}"  wx:key="{{item.no}}">
+<view class="bodylist" >
+<view class='bodyhead'>
+<image class='bodyimg' src='{{url}}{{item.companyLogo}}' ></image>
+<view class='bodyname'>
+{{item.companyName}}
+</view>
+<image class='imgright' src='/images/rrr.png'></image>
+<view class='zt'>交易成功</view>
+</view>
+<!--bodybody-->
+<view class='bodybody'>
+<navigator url="../epageswait/epageswait1?no={{item.no}}">
+<view class="bodyb2">
+<image class='bodyleftimg' src='{{url}}{{item.companyLogo}}'></image>
+<view class='textclass'>
+{{item.name}}
+</view>
+<view class='textright'>
+￥{{item.payMoney}}
+</view>
+</view>
+</navigator>
+<view class='bodyse'>
+<view class="bodyset">共{{item.quantity}}件商品：合计￥{{item.payMoney*item.quantity}}</view>
+</view>
+<view class='bodybottom'>
+<view class='bodybottomb'>
+<navigator url="../epagest/epagest?no={{item.no}}"> <image class='imgsq' src='cloud://lfs-rkjud.6c66-lfs-rkjud/apply.png'></image></navigator>
+</view>
+</view>
+</view>
+</view>
+<view class='a'></view>
+</view>
+
+
+<!--待付款-->
+<!--bodyhead-->
+<view class='{{ppp1}}' wx:for="{{all1}}"  wx:key="{{item.no}}">
+<view class="bodylist" >
+<view class='bodyhead'>
+<image class='bodyimg' src='{{url}}{{item.companyLogo}}' ></image>
+<view class='bodyname'>
+{{item.companyName}}
+</view>
+<image class='imgright' src='/images/rrr.png'></image>
+<view class='zt'>暂未支付</view>
+</view>
+<!--bodybody-->
+<view class='bodybody'>
+<navigator url="../epageswait/epageswait?no={{item.no}}">
+<view class="bodyb2">
+<image class='bodyleftimg' src='{{url}}{{item.companyLogo}}'></image>
+<view class='textclass'>
+{{item.name}}
+</view>
+<view class='textright'>
+￥{{item.payMoney}}
+</view>
+</view>
+</navigator>
+<view class='bodyse'>
+<view class="bodyset">共{{item.quantity}}件商品：合计￥{{item.payMoney*item.quantity}}</view>
+</view>
+<view class='bodybottom'>
+<view class='bodybottomb'>
+<navigator url="../epagesdd/epagesdd?id={{item.no}}"> <image class='imgsq'  src='cloud://lfs-rkjud.6c66-lfs-rkjud/daifuk.png'></image></navigator>
+</view>
+</view>
+</view>
+</view>
+<view class='a'></view>
+</view>
+
+<!--待收货-->
+<!--bodyhead-->
+<view class='{{ppp3}}' wx:for="{{all3}}"  wx:key="{{item.no}}">
+<view class="bodylist" >
+<view class='bodyhead'>
+<image class='bodyimg' src='{{url}}{{item.companyLogo}}' ></image>
+<view class='bodyname'>
+{{item.companyName}}
+</view>
+<image class='imgright' src='/images/rrr.png'></image>
+<view class='zt'>交易成功</view>
+</view>
+<!--bodybody-->
+<view class='bodybody'>
+<navigator url="../epagesdd/epagesdd?id={{item.no}}">
+<view class="bodyb2">
+<image class='bodyleftimg' src='{{url}}{{item.companyLogo}}'></image>
+<view class='textclass'>
+{{item.name}}
+</view>
+<view class='textright'>
+￥{{item.payMoney}}
+</view>
+</view>
+</navigator>
+<view class='bodyse'>
+<view class="bodyset">共{{item.quantity}}件商品：合计￥{{item.payMoney*item.quantity}}</view>
+</view>
+<view class='bodybottom'>
+<view class='bodybottomb'>
+<image class='imgsq' bindtap='zqgm'  src='cloud://lfs-rkjud.6c66-lfs-rkjud/zcgm.png'></image>
+</view>
+</view>
+</view>
+</view>
+<view class='a'></view>
+</view>
+
+
+<!--已完成-->
+<!--bodyhead-->
+<view class='{{ppp4}}' wx:for="{{all4}}"  wx:key="{{item.no}}">
+<view class="bodylist" >
+<view class='bodyhead'>
+<image class='bodyimg' src='{{url}}{{item.companyLogo}}' ></image>
+<view class='bodyname'>
+{{item.companyName}}
+</view>
+<image class='imgright' src='/images/rrr.png'></image>
+<view class='zt'>交易成功</view>
+</view>
+<!--bodybody-->
+<view class='bodybody'>
+<navigator url="../epageswait/epageswait1?no={{item.no}}">
+<view class="bodyb2">
+<image class='bodyleftimg' src='{{url}}{{item.companyLogo}}'></image>
+<view class='textclass'>
+{{item.name}}
+</view>
+<view class='textright'>
+￥{{item.payMoney}}
+</view>
+</view>
+</navigator>
+<view class='bodyse'>
+<view class="bodyset">共{{item.quantity}}件商品：合计￥{{item.payMoney*item.quantity}}</view>
+</view>
+<view class='bodybottom'>
+<view class='bodybottomb'>
+<navigator url="../epagesdd/epagesdd?id={{item.no}}"> 
+<image class='imgsq'  src='cloud://lfs-rkjud.6c66-lfs-rkjud/zcgm.png'></image>
+</navigator>
+</view>
+</view>
+</view>
+</view>
+<view class='a'></view>
+</view>
+
+
+<!--售后-->
+<!--bodyhead-->
+<view class='{{ppp5}}' wx:for="{{all5}}" wx:key="{{item.no}}">
+<view class="bodylist">
+<view class='bodyhead'>
+<image class='bodyimg' src='{{url}}{{item.companyLogo}}' ></image>
+<view class='bodyname'>
+{{item.companyName}}
+</view>
+<image class='imgright' src='/images/rrr.png'></image>
+<view class='zt'>交易成功</view>
+</view>
+<!--bodybody-->
+<view class='bodybody'>
+<view class="bodyb2">
+<image class='bodyleftimg' src='{{url}}{{item.companyLogo}}'></image>
+<view class='textclass'>
+{{item.name}}
+</view>
+<view class='textright'>
+￥{{item.payMoney}}
+</view>
+</view>
+<view class='bodyse'>
+<view class="bodyset">共{{item.quantity}}件商品：合计￥{{item.payMoney*item.quantity}}</view>
+</view>
+<view class='bodybottom'>
+<view class='bodybottomb'>
+<image class='imgsq'  src='cloud://lfs-rkjud.6c66-lfs-rkjud/tta.png'></image>
+</view>
+</view>
+</view>
+</view>
+<view class='a'></view>
 </view>

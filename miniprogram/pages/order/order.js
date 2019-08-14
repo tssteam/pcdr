@@ -4,7 +4,7 @@ Page({
   pfindcar: function () {
 
     wx.navigateTo({
-      url: '../myinfo/myinfo'
+      url: '../pfindcar/pfindcar'
     })
   },
   carfindp: function () {

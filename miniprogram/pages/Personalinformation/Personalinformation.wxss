@@ -1,0 +1,67 @@
+.all{
+  background-color: #f1f1f1;
+  height: 1310rpx;
+  width: 100%;
+}
+.list{
+  height: 100rpx;
+  width: 96%;
+  background-color: white;
+  border-radius:20rpx;
+  margin-left: 2%; 
+  margin-bottom: 20rpx;
+}
+.listleft{
+  float: left;
+  background-color: white;
+  margin-left: 20rpx;
+}
+.listright{
+  float: left;
+  background-color: white;
+  margin-left: 20rpx;
+}
+.text{
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 95rpx;
+  float: left;
+}
+
+.textp{
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 95rpx;
+  margin-left: 50rpx;
+  float: left;
+}
+
+.input{
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.img{
+  height: 60rpx;
+  width: 60rpx;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+.button{
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 5rpx;
+  font-size: 35rpx;
+  border-radius:40rpx;
+  color: white;
+  background-color: skyblue;
+}
+.imagelogo{
+  height: 268rpx;
+  width: 268rpx;
+  border-radius:268rpx; 
+  margin-left: 248rpx;
+}

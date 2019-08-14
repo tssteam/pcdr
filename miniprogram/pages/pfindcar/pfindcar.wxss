@@ -1,0 +1,221 @@
+/*!
+ * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2017 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+
+.all{
+  height: auto;
+  width: 100%;
+   background-color:  #ffffff;
+}
+.datatime{
+  height: 500rpx;
+  width:400rpx;
+  background-color: white;
+  color: black;
+  opacity: 1;
+  position: fixed;
+  top: 300rpx;
+  left: 330rpx;
+  display: block;
+}
+.datatimeno{
+   display: none;
+}
+.list{
+  height: 105rpx;
+  width: 100%;
+}
+.list1{
+  height: 85rpx;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.line{
+   width: 100%;
+   background-color: #eeeeee;
+   height: 2rpx;
+}
+.listb{
+  display: none;
+}
+.name{
+   font-size: 36rpx;
+   color: #999999;
+   margin-left:40rpx;
+   margin-top: 25rpx; 
+   float: left;
+}
+.name2{
+   font-size: 36rpx;
+   color: #999999;
+   margin-left:40rpx;
+   margin-top: 45rpx; 
+   float: left;
+}
+.name3{
+   font-size: 36rpx;
+   color: #999999;
+   margin-left:40rpx;
+   margin-top: 25rpx; 
+   float: left;
+}
+.name4{
+   color: #999999;
+   margin-left:40rpx;
+   margin-top: 23rpx; 
+   font-size: 25rpx;
+   width: 200rpx;
+   float: left;
+}
+.name5{
+   font-size: 25rpx;
+   color: #999999;
+   margin-left:40rpx;
+    margin-top: 23rpx; 
+   width: 200rpx;
+   float: left;
+}
+.input{
+  color: #7e7e7e;
+  margin-right:60rpx;
+  margin-top: 22rpx; 
+  width: 400rpx;
+  border-radius:10rpx; 
+
+  float: right;
+  height: 60rpx;
+  font-size: 26rpx;
+}
+.cfd{
+  float: left;
+}
+.input5{
+  color: #7e7e7e;
+  margin-left:150rpx;
+   margin-top: 22rpx; 
+  width: 400rpx;
+  border-radius:10rpx; 
+  float: right;
+  height: 60rpx;
+  font-size: 26rpx;
+}
+.input6{
+  color: #7e7e7e;
+  margin-left:150rpx;
+  margin-top: 22rpx; 
+  width: 400rpx;
+  border-radius:10rpx; 
+  float: right;
+  height: 60rpx;
+  font-size: 26rpx;
+}
+.rs{
+  height: 80rpx;
+  width: 360rpx; 
+  float: left;
+  line-height: 10rpx;
+  text-align: right;
+}
+.xls{
+  height: 80rpx;
+  width: 360rpx; 
+  float: left;
+  margin-left:20rpx; 
+  background-color: #fafafa;
+}
+.input1{
+  width: 150rpx;
+  border-radius:10rpx; 
+  line-height: 90rpx;
+  float: right;
+  height: 60rpx;
+  font-size: 35rpx;
+  color: #7e7e7e;
+}
+.input2{
+  width: 150rpx;
+  border-radius:10rpx; 
+  line-height: 90rpx;
+  float: right;
+  height: 60rpx;
+  font-size: 35rpx;
+  color: #7e7e7e;
+}
+.lida{
+  height: 120rpx;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.img2 {
+  height: 30rpx;
+  width: 30rpx;
+  float: right;
+  margin-top: 32rpx;
+  padding-left: 30rpx;
+}
+
+.img3 {
+  height: 30rpx;
+  width: 30rpx;
+  float: right;
+  margin-top: 32rpx;
+}
+
+.imge {
+  height: 50rpx;
+  width: 50rpx;
+  float: left;
+  margin-top: 30rpx;
+}
+
+.text {
+  height: 50rpx;
+  width: 200rpx;
+  float: left;
+}
+
+.textt {
+  font-size: 25rpx;
+  float: left;
+  line-height: 100rpx;
+  color: gray;
+}
+
+
+
+.ip2 {
+  background-color: gainsboro;
+  float: left;
+  font-size: 30rpx;
+}
+
+
+.dateline {
+  height: 100rpx;
+  width: 300rpx;
+  float: left;
+  font-size: 30rpx;
+  padding-top: 50rpx;
+}
+
+.dateline1 {
+  float: left;
+  height: 120rpx;
+  width: 400rpx;
+  font-size: 30rpx;
+  line-height: 110rpx;
+  text-align: center;
+  color: black;
+  background-color: gainsboro;
+  border-radius: 10rpx;
+}
+.buttonaa{
+  height: 100rpx;
+  background-color: #39ad69;
+  position: fixed;
+  font-size: 40rpx;
+  width: 100%;
+  bottom: 0rpx;
+}

@@ -1,0 +1,126 @@
+/* pages/beizhucar/beizhucar.wxss */
+.line{
+  height: 10rpx;
+  width: 100%;
+  background-color: black;
+}
+.texa{
+  padding-top:30rpx;
+  padding-bottom:30rpx;  
+  padding-left: 20rpx;
+}
+.tall{
+  height: 500rpx;
+  widows: 100%;
+  background-color: white;
+}
+.t1{
+  height: 60rpx;
+  width: 300rpx;
+  margin-left: 40rpx;
+  float: left;
+  border-radius:3rpx; 
+  text-align: center;
+  font-size: 30rpx;
+  background-color: gainsboro;
+}
+.t2{
+ height: 60rpx;
+  width: 200rpx;
+  float: left;
+    text-align: center;
+  font-size: 30rpx;
+   margin-left: 40rpx;
+  background-color: gainsboro;
+}
+.t3{
+ height: 60rpx;
+ width: 200rpx;
+  padding-top: 20rpx;
+  float: left;
+    text-align: center;
+   font-size: 30rpx;
+   margin-top: 60rpx;
+     margin-left: 40rpx;
+  background-color: gainsboro;
+}
+.t4{
+ height: 60rpx;
+  margin-left: 40rpx;
+ width: 200rpx;
+   text-align: center;
+  margin-top: 60rpx;
+  padding-top: 20rpx;
+   font-size: 30rpx;
+  float: left;
+  background-color: gainsboro;
+}
+.t5{
+ height: 60rpx;
+ width: 200rpx;
+  font-size: 30rpx;
+  margin-top: 60rpx;
+   margin-left: 40rpx;
+  float: left;
+    text-align: center;
+   padding-top: 20rpx;
+  background-color: gainsboro;
+}
+.t6{
+ height: 60rpx;
+ width: 200rpx;
+  font-size: 30rpx;
+  margin-top: 60rpx;
+   margin-left: 40rpx;
+  float: left;
+    text-align: center;
+   padding-top: 20rpx;
+  background-color: gainsboro;
+}
+.t7{
+ height: 60rpx;
+ width: 200rpx;
+  font-size: 30rpx;
+  margin-top: 60rpx;
+   margin-left: 40rpx;
+  float: left;
+    text-align: center;
+   padding-top: 20rpx;
+  background-color: gainsboro;
+}
+.t8{
+ height: 60rpx;
+ width: 200rpx;
+  font-size: 30rpx;
+  margin-top: 60rpx;
+   margin-left: 40rpx;
+  float: left;
+    text-align: center;
+   padding-top: 20rpx;
+  background-color: gainsboro;
+}
+.ll{
+  height: 25rpx;
+  width: 100%;
+  background-color: gainsboro;
+}
+.ord{
+  padding-left:20rpx;
+  font-size: 35rpx; 
+}
+.ta{
+  height: 300rpx;
+  width: 90%;
+  background-color: gainsboro;
+  border-radius:5rpx;
+  margin-left: 40rpx; 
+  margin-top: 40rpx;
+}
+.ok{
+  height: 75rpx;
+  width: 90%;
+  background-color: black;
+  color: white;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}

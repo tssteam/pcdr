@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -49,6 +49,70 @@
 					"id": -1,
 					"name": "2",
 					"pathName": "pages/myinfo/myinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "api",
+					"pathName": "pages/api/api",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mypage",
+					"pathName": "pages/mypage2/mypage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addF",
+					"pathName": "pages/addFunction/addFunction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addF",
+					"pathName": "pages/Personalinformation/Personalinformation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "order",
+					"pathName": "pages/ordercar/ordercar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "car",
+					"pathName": "pages/carfindp/index",
+					"query": "",
 					"scene": null
 				}
 			]

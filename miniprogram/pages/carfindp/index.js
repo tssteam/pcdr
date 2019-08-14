@@ -1,5 +1,7 @@
 // pages/myinfo/myinfo.js
 var dateTimePicker = require('../../utils/dateTimePicker.js');
+var getxdj = require('../../static/request.js')
+
 Page({
 
   /**
@@ -47,6 +49,12 @@ Page({
       });
     }
   },
+
+ onLoad:function(){
+
+        
+ 
+ },
 
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -181,7 +189,11 @@ Page({
     })
   },
 
-
+location:function(){
+ wx.navigateTo({
+   url: '../shopMap/shopMap',
+ })
+},
 
 // 页面不断加载，为了不断刷新城市多次选择，所以不用onload
   onShow: function (options) {
@@ -221,12 +233,6 @@ Page({
     // }
 
   },
-
-
-
-
-
-
 
 
 
@@ -287,10 +293,10 @@ Page({
 
 // 提交函数，将数据储存到云端，两个隐含的属性，一个是状态，一个是完成度
   formSubmit: function (e) {
-    console.log("修改")
-    const db = wx.cloud.database()
-    db.collection('carfindp').add({
-      data: {
+    getxdj.getxdj(
+    "post",
+    "https://pcdrapi.ywandy.top/api/driverorder",
+      {
         wxname: e.detail.value.wxname,
         out: e.detail.value.out,
         phone: e.detail.value.phone,
@@ -305,97 +311,34 @@ Page({
         zt: "没完成",
         beizhu: e.detail.value.beizhu,
         pcar: e.detail.value.pcar
-      },
-      success: res => {
-        this.setData({
-          wxname: e.detail.value.wxname,
-          out: e.detail.value.out,
-          phone: e.detail.value.phone,
-          incar: e.detail.value.incar,
-          username: e.detail.value.username,
-          site: e.detail.value.site,
-          price: e.detail.value.price,
-          inname: e.detail.value.inname,
-          outname: e.detail.value.outname,
-          time: e.detail.value.time,
-          time1: e.detail.value.time1,
-          zt: "没完成",
-          yd: "预定",
-          beizhu: e.detail.value.beizhu,
-          pc: { pcin: e.detail.value.out, pcout: e.detail.value.incar },
-          pcar: e.detail.value.pcar
-        })
-
-        wx.showToast({
-          title: '新增记录成功',
-          
-        })
-        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
-        wx.navigateTo({
-          url: '../userConsole1/userConsole?pc=' + JSON.stringify(this.data.pc),
-        })
-      },
-      fail: err => {
-        wx.showToast({
-          icon: 'none',
-          title: '新增记录失败'
-        })
-        console.error('[数据库] [新增记录] 失败：', err)
       }
-    })
-   
+    )
+     wx.showModal({
+       title: '确定下单',
+       content: '',
+       showCancel: true,
+       cancelText: '取消',
+       cancelColor: '',
+       confirmText: '确定',
+       confirmColor: '',
+       success: function(res) {
+          if(res.confirm){
+            wx.showToast({
+              title: '下单成功',
+            })
+            wx.navigateTo({
+              url: '../userConsole1/userConsole?pc=' + JSON.stringify(this.data.pc),
+            })
+          }if(res.cancel){
+         
+          }
+       },
+
+     })
+  
   },
 
 
- // 查询函数，没有用到，可能以后会用到。
-  onQuery: function (e) {
-    const db = wx.cloud.database()
-    // 查询当前用户所有的 counters
-    db.collection('carfindp ').where({
-      data: {
-        wxname: e.detail.value.wxname,
-        username: e.detail.value.username,
-        yd:"预定",
-        phone: e.detail.value.phone,
-        cartype:e.detail.value,
-        site: e.detail.value.site,
-        out: e.detail.value.out,
-        incar: e.detail.value.incar,
-        price: e.detail.value.price,
-        inname: e.detail.value.inname,
-        outname: e.detail.value.outname,
-        time: e.detail.value.time,
-      },
-    }).get({
-      success: res => {
-        this.setData({
-          wxname: e.detail.value.wxname,
-          username: e.detail.value.username,
-          phone: e.detail.value.phone,
-          yd: "预定",
-          age: e.detail.value.age,
-          cartype: e.detail.value,
-          site: e.detail.value.site,
-          out: e.detail.value.out,
-          incar: e.detail.value.incar,
-          price: e.detail.value.price,
-          inname: e.detail.value.inname,
-          outname: e.detail.value.outname,
-          time: e.detail.value.time,
-          
-    
-        })
-        console.log('[数据库] [查询记录] 成功: ', res)
-      },
-      fail: err => {
-        wx.showToast({
-          icon: 'none',
-          title: '查询记录失败'
-        })
-        console.error('[数据库] [查询记录] 失败：', err)
-      }
-    })
-  },
  
   
 })
